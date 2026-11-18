@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FCFCFA" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#FCFCFA" />
+  <meta name="color-scheme" content="light" />
+  <title>方案 A · 法式沙龙配方印签</title>
+  <style>
+    :root {
+      --paper: #FCFCFA;
+      --paper-tint: #F6F4EF;
+      --ink: #141413;
+      --ink-muted: #66635C;
+      --ink-faint: #9B978E;
+      --hairline: #E5E3DD;
+      --hairline-strong: #C9C5BC;
+      --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+      --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+      --serif: "Noto Serif SC", "Songti SC", "STSong", Georgia, serif;
+      --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      --sans: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html {
+      -webkit-tap-highlight-color: transparent;
+      -webkit-text-size-adjust: 100%;
+      overscroll-behavior: none;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+    }
+
+    body {
+      margin: 0;
+      height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      background: var(--paper);
+      overflow: hidden;
+      padding-top: env(safe-area-inset-top, 0px);
+    }
+
+    button, input, textarea {
+      font-family: inherit;
+    }
+
+    button, [role="button"], .tappable {
+      touch-action: manipulation;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+      cursor: pointer;
+    }
+
+    input[type="text"] {
+      font-size: 16px;
+      color: var(--ink);
+    }
+
+    .tabular { font-variant-numeric: tabular-nums; }
+
+    /* 顶部沙龙索引栏 */
+    .topbar {
+      height: 50px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      border-bottom: 1px solid var(--hairline);
+      background: var(--paper);
+      gap: 8px;
+    }
+
+    .brand-lockup {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .brand-title {
+      font-family: var(--serif);
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+    }
+
+    .brand-count {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--ink-muted);
+      letter-spacing: 0.04em;
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .seg-switch {
+      display: inline-flex;
+      border: 1px solid var(--ink);
+      background: var(--paper);
+    }
+
+    .seg-btn {
+      border: 0;
+      background: transparent;
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 500;
+      padding: 5px 10px;
+      transition: background-color 140ms var(--ease-out), color 140ms var(--ease-out), transform 120ms var(--ease-out);
+    }
+
+    .seg-btn.is-active {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .seg-btn:active { transform: scale(0.97); }
+
+    .wish-trigger {
+      border: 1px solid var(--hairline-strong);
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 5px 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: transform 120ms var(--ease-out), border-color 140ms ease;
+    }
+
+    .wish-trigger:active { transform: scale(0.97); }
+
+    /* 主舞台：单签横滑 / 目录总览 */
+    .stage {
+      flex: 1;
+      min-height: 0;
+      position: relative;
+    }
+
+    .deck {
+      height: 100%;
+      display: flex;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+      touch-action: pan-x;
+    }
+
+    .deck::-webkit-scrollbar { display: none; }
+
+    .deck[hidden], .index-view[hidden] { display: none; }
+
+    .slide {
+      flex: 0 0 100%;
+      width: 100%;
+      height: 100%;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      padding: 14px 16px calc(12px + env(safe-area-inset-bottom, 0px));
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* 单支沙龙试香签 */
+    .label-sheet {
+      flex: 1;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      gap: 10px;
+      border: 1px solid var(--ink);
+      background: var(--paper);
+      position: relative;
+      padding: 18px 20px 16px 18px;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+
+    .label-edge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 5px;
+      background: var(--scent-color, #141413);
+    }
+
+    /* 顶部非对称主视觉：大号编号 + 瓶身 */
+    .label-head {
+      display: grid;
+      grid-template-columns: 1fr 84px;
+      gap: 10px;
+      align-items: start;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .label-num {
+      font-family: var(--serif);
+      font-size: 38px;
+      line-height: 0.95;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .label-num span {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      color: var(--ink-muted);
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    .label-brand {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 3px;
+    }
+
+    .label-title {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.18;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .label-en {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 12px;
+      color: var(--ink-muted);
+      margin-bottom: 8px;
+    }
+
+    .label-spec {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--ink);
+      letter-spacing: 0.02em;
+    }
+
+    .label-spec strong {
+      color: var(--scent-color, var(--ink));
+      font-weight: 600;
+    }
+
+    .bottle-frame {
+      width: 92px;
+      height: 118px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ink);
+      margin-top: 2px;
+    }
+
+    .bottle-frame .bottle-svg {
+      width: 90px;
+      height: 114px;
+    }
+
+    .qty-confirm-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 8px;
+      flex-wrap: wrap;
+    }
+
+    .qty-mini-btn {
+      border: 1px solid var(--hairline-strong);
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: 11px;
+      padding: 4px 8px;
+      transition: background-color 140ms ease, color 140ms ease, transform 120ms var(--ease-out);
+    }
+
+    .qty-mini-btn.is-active {
+      background: var(--ink);
+      border-color: var(--ink);
+      color: var(--paper);
+    }
+
+    .qty-mini-btn:active { transform: scale(0.97); }
+
+    /* 诗意句 + 前中后调三行 */
+    .poetic-line {
+      font-family: var(--serif);
+      font-size: 14px;
+      line-height: 1.6;
+      color: #3D3B36;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .notes-table {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid var(--ink);
+    }
+
+    .note-row {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      align-items: baseline;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--hairline);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .note-row:last-child { border-bottom: 0; }
+
+    .note-key {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--ink-muted);
+    }
+
+    .note-val {
+      color: var(--ink);
+    }
+
+    /* 精密试香标尺（1.0 - 10.0） */
+    .ruler-section {
+      padding: 12px 0 8px;
+    }
+
+    .ruler-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .ruler-caption {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--ink-muted);
+      letter-spacing: 0.04em;
+    }
+
+    .ruler-readout {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .ruler-score {
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--scent-color, var(--ink));
+    }
+
+    .ruler-unit {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--ink-muted);
+    }
+
+    .ruler-track-wrap {
+      position: relative;
+      height: 46px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      touch-action: none;
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    .ruler-ticks {
+      position: relative;
+      height: 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 1px solid var(--hairline-strong);
+      padding-bottom: 2px;
+    }
+
+    .ruler-tick {
+      width: 1px;
+      height: 7px;
+      background: var(--hairline-strong);
+      transition: background-color 120ms ease;
+    }
+
+    .ruler-tick.is-major {
+      height: 13px;
+      background: var(--ink-muted);
+    }
+
+    .ruler-tick.is-filled {
+      background: var(--scent-color, var(--ink));
+    }
+
+    .ruler-progress-line {
+      position: absolute;
+      left: 0;
+      bottom: 24px;
+      height: 2px;
+      background: var(--scent-color, var(--ink));
+      pointer-events: none;
+      transition: width 80ms linear;
+    }
+
+    .ruler-needle {
+      position: absolute;
+      top: 3px;
+      width: 18px;
+      height: 26px;
+      margin-left: -9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      transition: left 80ms linear;
+    }
+
+    .ruler-needle::before {
+      content: "";
+      width: 2px;
+      height: 22px;
+      background: var(--scent-color, var(--ink));
+    }
+
+    .ruler-needle::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--scent-color, var(--ink));
+    }
+
+    .ruler-scale-labels {
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--ink-faint);
+      margin-top: 3px;
+    }
+
+    .mood-line {
+      font-size: 12.5px;
+      color: var(--ink-muted);
+      min-height: 18px;
+      margin-top: 2px;
+    }
+
+    /* 心愿印签 + 一行笔记 */
+    .action-row {
+      display: flex;
+      gap: 8px;
+      align-items: stretch;
+      margin-top: 8px;
+    }
+
+    .wish-toggle-btn {
+      flex: 1;
+      height: 42px;
+      border: 1px solid var(--ink);
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      transition: background-color 160ms var(--ease-out), color 160ms var(--ease-out), transform 120ms var(--ease-out);
+    }
+
+    .wish-toggle-btn.is-active {
+      background: var(--scent-color, var(--ink));
+      border-color: var(--scent-color, var(--ink));
+      color: #FFFFFF;
+    }
+
+    .wish-toggle-btn:active { transform: scale(0.97); }
+
+    .note-line-input {
+      width: 100%;
+      border: 0;
+      border-bottom: 1px solid var(--hairline-strong);
+      background: transparent;
+      padding: 8px 2px 6px;
+      margin-top: 6px;
+      outline: none;
+      border-radius: 0;
+      transition: border-color 140ms ease;
+    }
+
+    .note-line-input:focus {
+      border-bottom-color: var(--ink);
+    }
+
+    .note-line-input::placeholder {
+      color: var(--ink-faint);
+      font-size: 13px;
+    }
+
+    /* 底部翻签控制条 */
+    .deck-pager {
+      height: 42px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 8px;
+    }
+
+    .pager-btn {
+      border: 0;
+      background: transparent;
+      color: var(--ink);
+      font-size: 12.5px;
+      font-weight: 500;
+      padding: 6px 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: opacity 140ms ease, transform 120ms var(--ease-out);
+    }
+
+    .pager-btn:disabled {
+      opacity: 0.28;
+      cursor: default;
+    }
+
+    .pager-btn:active:not(:disabled) { transform: scale(0.97); }
+
+    .pager-dots {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .pager-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--hairline-strong);
+      border: 0;
+      padding: 0;
+      transition: transform 160ms var(--ease-out), background-color 160ms ease;
+    }
+
+    .pager-dot.is-active {
+      background: var(--ink);
+      transform: scale(1.35);
+    }
+
+    .pager-dot.is-tested:not(.is-active) {
+      background: var(--ink-muted);
+    }
+
+    /* 目录总览 */
+    .index-view {
+      height: 100%;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      padding: 8px 16px calc(24px + env(safe-area-inset-bottom, 0px));
+    }
+
+    .index-intro {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 8px 0 10px;
+      border-bottom: 1px solid var(--ink);
+      font-size: 12px;
+      color: var(--ink-muted);
+    }
+
+    .index-row {
+      width: 100%;
+      border: 0;
+      border-bottom: 1px solid var(--hairline);
+      background: transparent;
+      padding: 13px 2px;
+      display: grid;
+      grid-template-columns: 32px 1fr auto;
+      gap: 10px;
+      align-items: center;
+      text-align: left;
+      transition: background-color 140ms ease, transform 120ms var(--ease-out);
+    }
+
+    .index-row:active {
+      transform: scale(0.99);
+      background: var(--paper-tint);
+    }
+
+    .index-num {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--ink-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .index-swatch {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .index-main {
+      min-width: 0;
+    }
+
+    .index-title {
+      font-family: var(--serif);
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+
+    .index-sub {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--ink-muted);
+    }
+
+    .index-score {
+      text-align: right;
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .index-wish-flag {
+      display: block;
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 500;
+      color: var(--scent-color, var(--ink));
+      margin-top: 2px;
+    }
+
+    /* 心愿单抽屉 */
+    .sheet-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(20, 20, 19, 0.42);
+      z-index: 60;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 220ms var(--ease-out);
+    }
+
+    .sheet-backdrop.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .sheet {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      max-height: 82dvh;
+      max-width: 560px;
+      margin: 0 auto;
+      background: var(--paper);
+      border-top: 1.5px solid var(--ink);
+      z-index: 61;
+      display: flex;
+      flex-direction: column;
+      transform: translateY(100%);
+      transition: transform 320ms var(--ease-drawer);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    .sheet.is-open {
+      transform: translateY(0);
+    }
+
+    .sheet-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .sheet-title {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .sheet-close {
+      border: 1px solid var(--hairline-strong);
+      background: var(--paper);
+      color: var(--ink);
+      width: 32px;
+      height: 32px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sheet-body {
+      flex: 1;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      padding: 14px 18px;
+    }
+
+    .sheet-kpis {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--ink);
+      margin-bottom: 16px;
+    }
+
+    .sheet-kpi {
+      padding: 10px 8px;
+      text-align: center;
+      border-right: 1px solid var(--hairline);
+    }
+
+    .sheet-kpi:last-child { border-right: 0; }
+
+    .sheet-kpi span {
+      display: block;
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--ink-muted);
+      margin-bottom: 2px;
+    }
+
+    .sheet-kpi strong {
+      font-family: var(--serif);
+      font-size: 20px;
+    }
+
+    .sheet-section-title {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--ink-muted);
+      letter-spacing: 0.05em;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .sheet-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--hairline);
+      font-size: 14px;
+    }
+
+    .sheet-foot {
+      padding: 12px 18px;
+      border-top: 1px solid var(--hairline);
+    }
+
+    .copy-btn {
+      width: 100%;
+      height: 44px;
+      border: 1px solid var(--ink);
+      background: var(--ink);
+      color: var(--paper);
+      font-size: 13.5px;
+      font-weight: 600;
+      transition: transform 120ms var(--ease-out);
+    }
+
+    .copy-btn:active { transform: scale(0.97); }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 22px;
+      transform: translate(-50%, 16px);
+      background: var(--ink);
+      color: var(--paper);
+      font-size: 12.5px;
+      padding: 8px 14px;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 80;
+      transition: opacity 180ms var(--ease-out), transform 180ms var(--ease-out);
+    }
+
+    .toast.is-show {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .index-row:hover { background: var(--paper-tint); }
+      .wish-trigger:hover { border-color: var(--ink); }
+      .wish-toggle-btn:not(.is-active):hover { background: var(--paper-tint); }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-lockup">
+      <span class="brand-title">十支寻香签</span>
+      <span class="brand-count tabular" id="top-progress">00/10</span>
+    </div>
+    <div class="top-actions">
+      <div class="seg-switch" role="tablist" aria-label="视图切换">
+        <button type="button" class="seg-btn is-active" data-view="deck" role="tab" aria-selected="true">单签</button>
+        <button type="button" class="seg-btn" data-view="index" role="tab" aria-selected="false">目录</button>
+      </div>
+      <button type="button" class="wish-trigger" id="open-sheet-btn">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M12 21s-7-4.4-9.5-8.5A5.4 5.4 0 0 1 12 6.2a5.4 5.4 0 0 1 9.5 6.3C19 16.6 12 21 12 21z" />
+        </svg>
+        <span class="tabular" id="wish-count">心愿 0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="stage">
+    <div class="deck" id="deck-view"></div>
+    <div class="index-view" id="index-view" hidden></div>
+  </main>
+
+  <div class="sheet-backdrop" id="sheet-backdrop"></div>
+  <section class="sheet" id="wish-sheet" role="dialog" aria-modal="true" aria-label="正装心愿单">
+    <header class="sheet-head">
+      <h2 class="sheet-title">试香心愿印签</h2>
+      <button type="button" class="sheet-close" id="close-sheet-btn" aria-label="关闭">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 6 6 18M6 6l12 12" /></svg>
+      </button>
+    </header>
+    <div class="sheet-body" id="sheet-body"></div>
+    <footer class="sheet-foot">
+      <button type="button" class="copy-btn" id="copy-report-btn">复制心愿清单发给男朋友</button>
+    </footer>
+  </section>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="../scripts/data.js"></script>
+  <script src="./scent-meta.js"></script>
+  <script>
+    (function () {
+      "use strict";
+      var S = window.SCENT_STUDIO;
+      var items = S.getMergedItems();
+      var state = S.loadState();
+      var currentView = "deck";
+      var currentIndex = 0;
+      var toastTimer = null;
+
+      var deckEl = document.getElementById("deck-view");
+      var indexEl = document.getElementById("index-view");
+      var topProgressEl = document.getElementById("top-progress");
+      var wishCountEl = document.getElementById("wish-count");
+      var sheetEl = document.getElementById("wish-sheet");
+      var backdropEl = document.getElementById("sheet-backdrop");
+      var sheetBodyEl = document.getElementById("sheet-body");
+      var toastEl = document.getElementById("toast");
+
+      function showToast(msg) {
+        toastEl.textContent = msg;
+        toastEl.classList.add("is-show");
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () {
+          toastEl.classList.remove("is-show");
+        }, 2000);
+      }
+
+      function buildTicksHtml(score) {
+        var html = "";
+        for (var i = 0; i <= 18; i++) {
+          var val = 1 + i * 0.5;
+          var isMajor = i === 0 || i === 4 || i === 8 || i === 12 || i === 16 || i === 18;
+          var isFilled = typeof score === "number" && val <= score;
+          html += '<span class="ruler-tick' + (isMajor ? " is-major" : "") + (isFilled ? " is-filled" : "") + '"></span>';
+        }
+        return html;
+      }
+
+      function scoreToPct(score) {
+        if (typeof score !== "number") return 0;
+        return Math.max(0, Math.min(100, ((score - 1) / 9) * 100));
+      }
+
+      function renderDeck() {
+        var html = items.map(function (item, idx) {
+          var r = S.getReview(state, item.id);
+          var score = r.overallScore;
+          var hasScore = typeof score === "number";
+          var pct = scoreToPct(score);
+          var isWish = r.buyIntent === "must_buy";
+          var specText = S.formatSpecSummary(item, r.confirmedQuantity);
+
+          var qtyBlock = item.isUncertain
+            ? '<div class="qty-confirm-row" data-id="' + item.id + '">' +
+                '<button type="button" class="qty-mini-btn' + (r.confirmedQuantity === 1 ? " is-active" : "") + '" data-qty="1">实收 ×1</button>' +
+                '<button type="button" class="qty-mini-btn' + (r.confirmedQuantity === 2 ? " is-active" : "") + '" data-qty="2">实收 ×2</button>' +
+              "</div>"
+            : "";
+
+          var dotsHtml = items.map(function (it, dIdx) {
+            var dr = S.getReview(state, it.id);
+            var cls = "pager-dot" + (dIdx === idx ? " is-active" : "") + (typeof dr.overallScore === "number" ? " is-tested" : "");
+            return '<button type="button" class="' + cls + '" data-jump="' + dIdx + '" aria-label="第 ' + (dIdx + 1) + ' 支"></button>';
+          }).join("");
+
+          return (
+            '<article class="slide" data-index="' + idx + '" data-id="' + item.id + '">' +
+              '<div class="label-sheet" style="--scent-color:' + item.palette.primary + '">' +
+                '<span class="label-edge" aria-hidden="true"></span>' +
+                "<div>" +
+                  '<div class="label-head">' +
+                    "<div>" +
+                      '<div class="label-num tabular">N°' + item.indexLabel + "<span>/ 10</span></div>" +
+                      '<div class="label-brand">' + S.escapeHtml(item.brandZh + " · " + item.brandEn) + "</div>" +
+                      '<h2 class="label-title">' + S.escapeHtml(item.nameZh) + "</h2>" +
+                      '<div class="label-en">' + S.escapeHtml(item.nameEn) + "</div>" +
+                      '<div class="label-spec tabular"><strong>' + S.escapeHtml(specText) + "</strong></div>" +
+                      qtyBlock +
+                    "</div>" +
+                    '<div class="bottle-frame">' +
+                      S.renderBottleSvg(item.id, { stroke: "#141413", tint: item.palette.aura, tintOpacity: 0.28 }) +
+                    "</div>" +
+                  "</div>" +
+                  '<p class="poetic-line">“' + S.escapeHtml(item.poetic) + '”</p>' +
+                  '<div class="notes-table">' +
+                    '<div class="note-row"><span class="note-key">前调</span><span class="note-val">' + S.escapeHtml(item.notes.top) + "</span></div>" +
+                    '<div class="note-row"><span class="note-key">中调</span><span class="note-val">' + S.escapeHtml(item.notes.heart) + "</span></div>" +
+                    '<div class="note-row"><span class="note-key">后调</span><span class="note-val">' + S.escapeHtml(item.notes.base) + "</span></div>" +
+                  "</div>" +
+                "</div>" +
+                "<div>" +
+                  '<div class="ruler-section">' +
+                    '<div class="ruler-head">' +
+                      '<span class="ruler-caption">SCENT SCALE · 拖动标尺打分</span>' +
+                      '<div class="ruler-readout">' +
+                        '<strong class="ruler-score tabular" data-score-val>' + S.formatScore(score) + "</strong>" +
+                        '<span class="ruler-unit">/ 10</span>' +
+                      "</div>" +
+                    "</div>" +
+                    '<div class="ruler-track-wrap" data-ruler="' + item.id + '" role="slider" aria-label="试香评分" aria-valuemin="1" aria-valuemax="10" aria-valuenow="' + (hasScore ? score : 0) + '">' +
+                      '<div class="ruler-ticks" data-ticks>' + buildTicksHtml(score) + "</div>" +
+                      '<div class="ruler-progress-line" data-fill style="width:' + (hasScore ? pct : 0) + '%"></div>' +
+                      '<div class="ruler-needle" data-needle style="left:' + (hasScore ? pct : 0) + '%;opacity:' + (hasScore ? 1 : 0.25) + '"></div>' +
+                      '<div class="ruler-scale-labels tabular"><span>1.0</span><span>3.0</span><span>5.0</span><span>7.0</span><span>9.0</span><span>10</span></div>' +
+                    "</div>" +
+                    '<div class="mood-line" data-mood>' + S.escapeHtml(S.scoreMood(score)) + "</div>" +
+                  "</div>" +
+                  '<div class="action-row">' +
+                    '<button type="button" class="wish-toggle-btn' + (isWish ? " is-active" : "") + '" data-wish="' + item.id + '" aria-pressed="' + (isWish ? "true" : "false") + '">' +
+                      '<svg width="14" height="14" viewBox="0 0 24 24" fill="' + (isWish ? "currentColor" : "none") + '" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-4.4-9.5-8.5A5.4 5.4 0 0 1 12 6.2a5.4 5.4 0 0 1 9.5 6.3C19 16.6 12 21 12 21z" /></svg>' +
+                      "<span>" + (isWish ? "已收入正装心愿单" : "收入正装心愿单") + "</span>" +
+                    "</button>" +
+                  "</div>" +
+                  '<input type="text" class="note-line-input" data-note="' + item.id + '" maxlength="120" value="' + S.escapeHtml(r.note || "") + '" placeholder="记一句闻后感（例如：两小时后贴肤变很温柔）" />' +
+                "</div>" +
+              "</div>" +
+              '<div class="deck-pager">' +
+                '<button type="button" class="pager-btn" data-step="-1"' + (idx === 0 ? " disabled" : "") + ">&larr; 上一支</button>" +
+                '<div class="pager-dots">' + dotsHtml + "</div>" +
+                '<button type="button" class="pager-btn" data-step="1"' + (idx === items.length - 1 ? " disabled" : "") + ">下一支 &rarr;</button>" +
+              "</div>" +
+            "</article>"
+          );
+        }).join("");
+
+        deckEl.innerHTML = html;
+        bindRulers();
+      }
+
+      function renderIndex() {
+        var stats = S.computeStats(items, state);
+        var html =
+          '<div class="index-intro tabular">' +
+            "<span>点击任意一行跳回单签试香</span>" +
+            "<span>已试 " + stats.testedCount + "/10 · 均分 " + stats.avgText + "</span>" +
+          "</div>";
+        html += items.map(function (item, idx) {
+          var r = S.getReview(state, item.id);
+          var isWish = r.buyIntent === "must_buy";
+          return (
+            '<button type="button" class="index-row" data-jump="' + idx + '" style="--scent-color:' + item.palette.primary + '">' +
+              '<span class="index-num tabular"><span class="index-swatch" style="background:' + item.palette.primary + '"></span>' + item.indexLabel + "</span>" +
+              '<span class="index-main">' +
+                '<div class="index-title">' + S.escapeHtml(item.brandZh + " · " + item.nameZh) + "</div>" +
+                '<div class="index-sub tabular">' + S.escapeHtml(S.formatCompactSpec(item, r.confirmedQuantity) + " · " + item.scentFamily) + "</div>" +
+              "</span>" +
+              '<span class="index-score tabular">' +
+                S.formatScore(r.overallScore) +
+                (isWish ? '<span class="index-wish-flag">想收正装</span>' : "") +
+              "</span>" +
+            "</button>"
+          );
+        }).join("");
+        indexEl.innerHTML = html;
+      }
+
+      function syncHeader() {
+        var stats = S.computeStats(items, state);
+        topProgressEl.textContent = (stats.testedCount < 10 ? "0" : "") + stats.testedCount + "/10";
+        wishCountEl.textContent = "心愿 " + stats.mustBuyCount;
+      }
+
+      function updateSlideVisual(slide, item, review) {
+        var score = review.overallScore;
+        var hasScore = typeof score === "number";
+        var pct = scoreToPct(score);
+        slide.querySelector("[data-score-val]").textContent = S.formatScore(score);
+        slide.querySelector("[data-fill]").style.width = (hasScore ? pct : 0) + "%";
+        var needle = slide.querySelector("[data-needle]");
+        needle.style.left = (hasScore ? pct : 0) + "%";
+        needle.style.opacity = hasScore ? "1" : "0.25";
+        slide.querySelector("[data-ticks]").innerHTML = buildTicksHtml(score);
+        slide.querySelector("[data-mood]").textContent = S.scoreMood(score);
+
+        var wishBtn = slide.querySelector("[data-wish]");
+        var isWish = review.buyIntent === "must_buy";
+        wishBtn.classList.toggle("is-active", isWish);
+        wishBtn.setAttribute("aria-pressed", isWish ? "true" : "false");
+        wishBtn.querySelector("span").textContent = isWish ? "已收入正装心愿单" : "收入正装心愿单";
+        var svg = wishBtn.querySelector("svg");
+        if (svg) svg.setAttribute("fill", isWish ? "currentColor" : "none");
+      }
+
+      function bindRulers() {
+        var rulers = deckEl.querySelectorAll("[data-ruler]");
+        rulers.forEach(function (ruler) {
+          var id = ruler.getAttribute("data-ruler");
+          var slide = ruler.closest(".slide");
+          var item = items.find(function (x) { return x.id === id; });
+
+          function applyClientX(clientX) {
+            var rect = ruler.getBoundingClientRect();
+            var ratio = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
+            var raw = 1 + ratio * 9;
+            var snapped = Math.round(raw * 2) / 2;
+            var r = S.updateReview(state, id, { overallScore: snapped });
+            ruler.setAttribute("aria-valuenow", String(snapped));
+            updateSlideVisual(slide, item, r);
+            syncHeader();
+          }
+
+          var dragging = false;
+          ruler.addEventListener("pointerdown", function (e) {
+            e.stopPropagation();
+            dragging = true;
+            if (ruler.setPointerCapture) ruler.setPointerCapture(e.pointerId);
+            applyClientX(e.clientX);
+          });
+          ruler.addEventListener("pointermove", function (e) {
+            if (!dragging) return;
+            e.stopPropagation();
+            applyClientX(e.clientX);
+          });
+          ruler.addEventListener("pointerup", function () { dragging = false; });
+          ruler.addEventListener("pointercancel", function () { dragging = false; });
+        });
+      }
+
+      function jumpToSlide(idx) {
+        currentIndex = Math.max(0, Math.min(items.length - 1, idx));
+        if (currentView !== "deck") switchView("deck");
+        var width = deckEl.clientWidth || 390;
+        deckEl.scrollTo({ left: currentIndex * width, behavior: "smooth" });
+      }
+
+      function switchView(view) {
+        currentView = view;
+        document.querySelectorAll("[data-view]").forEach(function (b) {
+          var active = b.getAttribute("data-view") === view;
+          b.classList.toggle("is-active", active);
+          b.setAttribute("aria-selected", active ? "true" : "false");
+        });
+        if (view === "index") {
+          renderIndex();
+          deckEl.hidden = true;
+          indexEl.hidden = false;
+        } else {
+          renderDeck();
+          indexEl.hidden = true;
+          deckEl.hidden = false;
+          deckEl.scrollLeft = currentIndex * (deckEl.clientWidth || 390);
+        }
+      }
+
+      function renderSheet() {
+        var stats = S.computeStats(items, state);
+        var html =
+          '<div class="sheet-kpis tabular">' +
+            '<div class="sheet-kpi"><span>已试支数</span><strong>' + stats.testedCount + ' / 10</strong></div>' +
+            '<div class="sheet-kpi"><span>已试均分</span><strong>' + stats.avgText + "</strong></div>" +
+            '<div class="sheet-kpi"><span>正装心愿</span><strong>' + stats.mustBuyCount + " 支</strong></div>" +
+          "</div>";
+
+        html += '<div class="sheet-section-title">想收正装（心愿清单）</div>';
+        if (stats.mustBuyList.length) {
+          html += stats.mustBuyList.map(function (entry) {
+            return '<div class="sheet-item"><span>' + S.escapeHtml(entry.item.brandZh + " · " + entry.item.nameZh) + '</span><strong class="tabular">' + S.formatScore(entry.review.overallScore) + " 分</strong></div>";
+          }).join("");
+        } else {
+          html += '<div class="sheet-item" style="color:var(--ink-muted)">还没有收入正装清单，去印签上点击“收入正装心愿单”吧。</div>';
+        }
+
+        html += '<div class="sheet-section-title" style="margin-top:16px">评分排行 Top 3</div>';
+        if (stats.top3.length) {
+          html += stats.top3.map(function (entry, i) {
+            return '<div class="sheet-item"><span>' + (i + 1) + ". " + S.escapeHtml(entry.item.brandZh + " · " + entry.item.nameZh) + '</span><strong class="tabular">' + S.formatScore(entry.review.overallScore) + " 分</strong></div>";
+          }).join("");
+        } else {
+          html += '<div class="sheet-item" style="color:var(--ink-muted)">滑动或轻点标尺后这里会自动生成排名。</div>';
+        }
+        sheetBodyEl.innerHTML = html;
+      }
+
+      function openSheet() {
+        renderSheet();
+        backdropEl.classList.add("is-open");
+        sheetEl.classList.add("is-open");
+      }
+
+      function closeSheet() {
+        backdropEl.classList.remove("is-open");
+        sheetEl.classList.remove("is-open");
+      }
+
+      document.querySelector(".top-actions").addEventListener("click", function (e) {
+        var viewBtn = e.target.closest("[data-view]");
+        if (viewBtn) switchView(viewBtn.getAttribute("data-view"));
+      });
+
+      deckEl.addEventListener("click", function (e) {
+        var wishBtn = e.target.closest("[data-wish]");
+        if (wishBtn) {
+          var id = wishBtn.getAttribute("data-wish");
+          var cur = S.getReview(state, id);
+          var next = cur.buyIntent === "must_buy" ? null : "must_buy";
+          var r = S.updateReview(state, id, { buyIntent: next });
+          var slide = wishBtn.closest(".slide");
+          var item = items.find(function (x) { return x.id === id; });
+          updateSlideVisual(slide, item, r);
+          syncHeader();
+          showToast(next === "must_buy" ? "已加入正装心愿单" : "已移出正装心愿单");
+          return;
+        }
+
+        var qtyBtn = e.target.closest("[data-qty]");
+        if (qtyBtn) {
+          var wrap = qtyBtn.closest("[data-id]");
+          var qId = wrap.getAttribute("data-id");
+          var q = Number(qtyBtn.getAttribute("data-qty"));
+          var qr = S.updateReview(state, qId, { confirmedQuantity: q });
+          var qItem = items.find(function (x) { return x.id === qId; });
+          wrap.querySelectorAll("[data-qty]").forEach(function (b) {
+            b.classList.toggle("is-active", Number(b.getAttribute("data-qty")) === q);
+          });
+          wrap.closest(".label-head").querySelector(".label-spec strong").textContent = S.formatSpecSummary(qItem, qr.confirmedQuantity);
+          showToast("已确认实收 " + q + " 支");
+          return;
+        }
+
+        var stepBtn = e.target.closest("[data-step]");
+        if (stepBtn) {
+          jumpToSlide(currentIndex + Number(stepBtn.getAttribute("data-step")));
+          return;
+        }
+
+        var jumpDot = e.target.closest("[data-jump]");
+        if (jumpDot) {
+          jumpToSlide(Number(jumpDot.getAttribute("data-jump")));
+        }
+      });
+
+      deckEl.addEventListener("input", function (e) {
+        var noteInput = e.target.closest("[data-note]");
+        if (noteInput) {
+          S.updateReview(state, noteInput.getAttribute("data-note"), { note: noteInput.value });
+        }
+      });
+
+      deckEl.addEventListener("scroll", function () {
+        var w = deckEl.clientWidth || 390;
+        var nextIdx = Math.round(deckEl.scrollLeft / w);
+        if (nextIdx !== currentIndex && nextIdx >= 0 && nextIdx < items.length) {
+          currentIndex = nextIdx;
+        }
+      }, { passive: true });
+
+      indexEl.addEventListener("click", function (e) {
+        var row = e.target.closest("[data-jump]");
+        if (row) jumpToSlide(Number(row.getAttribute("data-jump")));
+      });
+
+      document.getElementById("open-sheet-btn").addEventListener("click", openSheet);
+      document.getElementById("close-sheet-btn").addEventListener("click", closeSheet);
+      backdropEl.addEventListener("click", closeSheet);
+
+      document.getElementById("copy-report-btn").addEventListener("click", function () {
+        var text = S.buildWishlistText(items, state);
+        S.copyText(text).then(function () {
+          showToast("已复制心愿清单，快粘贴发给男朋友吧");
+        });
+      });
+
+      renderDeck();
+      syncHeader();
+    })();
+  </script>
+</body>
+</html>

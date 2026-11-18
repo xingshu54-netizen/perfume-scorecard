@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FCFCFA" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#FCFCFA" />
+  <meta name="color-scheme" content="light" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239E2A2B' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 3h6v3H9z'/%3E%3Cpath d='M10 6v3l-4.5 5.2A3 3 0 0 0 4.7 16.2V19a2 2 0 0 0 2 2h10.6a2 2 0 0 0 2-2v-2.8a3 3 0 0 0-.8-2L14 9V6'/%3E%3C/svg%3E" />
+  <title>十支寻香签 — 给你的沙龙试香手账</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <script defer src="scripts/bottle-images.js"></script>
+  <script defer src="scripts/data.js"></script>
+  <script defer src="scripts/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-lockup">
+      <span class="brand-title">十支寻香签</span>
+      <span class="brand-count tabular" id="top-progress" data-testid="progress-text">00/10</span>
+    </div>
+    <div class="top-actions">
+      <div class="seg-switch" role="tablist" aria-label="视图切换">
+        <button type="button" class="seg-btn is-active" data-view="deck" data-testid="view-deck-btn" role="tab" aria-selected="true">单签</button>
+        <button type="button" class="seg-btn" data-view="index" data-testid="view-index-btn" role="tab" aria-selected="false">目录</button>
+      </div>
+      <button type="button" class="wish-trigger" id="open-sheet-btn" data-testid="open-report-btn">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M12 20.5s-7.4-4.6-9.8-8.9A5.4 5.4 0 0 1 12 6.2a5.4 5.4 0 0 1 9.8 5.4C19.4 15.9 12 20.5 12 20.5z" />
+        </svg>
+        <span class="tabular" id="wish-count">心愿 0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="stage">
+    <div class="deck" id="deck-view" data-testid="deck-view"></div>
+    <div class="index-view" id="index-view" data-testid="index-view" hidden></div>
+  </main>
+
+  <div class="sheet-backdrop" id="sheet-backdrop"></div>
+  <section class="sheet" id="wish-sheet" data-testid="wish-sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+    <header class="sheet-head">
+      <div>
+        <h2 class="sheet-title" id="sheet-title">正装心愿单与战报</h2>
+      </div>
+      <button type="button" class="sheet-close" id="close-sheet-btn" data-testid="close-sheet-btn" aria-label="关闭心愿单">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <path d="M18 6 6 18M6 6l12 12" />
+        </svg>
+      </button>
+    </header>
+    <div class="sheet-body" id="sheet-body"></div>
+    <footer class="sheet-foot">
+      <div class="sheet-primary-actions">
+        <button type="button" class="btn-vermilion" id="copy-report-btn" data-testid="copy-report-btn">复制文字发给男朋友</button>
+        <button type="button" class="btn-ink-outline" id="export-png-btn" data-testid="export-png-btn">导出手账长图</button>
+      </div>
+      <div class="sheet-secondary-actions">
+        <button type="button" class="link-action" id="export-json-btn">导出备份</button>
+        <label class="link-action" for="import-json-input">
+          <span>恢复备份</span>
+          <input type="file" id="import-json-input" accept="application/json,.json" hidden />
+        </label>
+        <button type="button" class="link-action link-danger" id="ask-reset-btn">清空全部</button>
+      </div>
+      <div class="reset-confirm-strip" id="reset-confirm-strip" hidden>
+        <span>清空本机全部打分与笔记？</span>
+        <div class="reset-confirm-btns">
+          <button type="button" class="mini-cancel-btn" id="cancel-reset-btn">取消</button>
+          <button type="button" class="mini-danger-btn" id="confirm-reset-btn">确认清空</button>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <div class="toast" id="toast" data-testid="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

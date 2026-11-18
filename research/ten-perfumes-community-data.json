@@ -1,0 +1,1918 @@
+{
+  "schemaVersion": "1.0.0",
+  "compiledAt": "2026-11-18T14:45:00Z",
+  "description": "十支寻香签 — 10 款香水真实社区主档案（整合香水时代 + 小红书 + 什么值得买实测数据与打分卡定稿文案）",
+  "sourcesOverview": {
+    "nosetime": {
+      "sourceSite": "nosetime.com",
+      "hostVerifiedOrigins": [
+        "https://www.nosetime.com"
+      ],
+      "files": [
+        "raw-nosetime-1to5.json",
+        "raw-nosetime-6to10.json"
+      ],
+      "totalItems": 10
+    },
+    "social": {
+      "xhsAccessStatus": "logged_in_verified",
+      "hostVerifiedOrigins": [
+        "https://www.xiaohongshu.com",
+        "https://www.smzdm.com",
+        "https://search.smzdm.com",
+        "https://post.smzdm.com"
+      ],
+      "files": [
+        "raw-social-1to5.json",
+        "raw-social-6to10.json"
+      ],
+      "totalItems": 10
+    }
+  },
+  "copywritingRules": {
+    "viewportConstraint": "375x812 移动端 .panel-swap-stage 固定 height: 98px; overflow: hidden; .info-val 单行约容纳 22 个汉字",
+    "reputationTags": "每支严格 3 个纯中文标签，每个 4-7 个汉字",
+    "wearingGuideFields": "spray / outfit / tip 每条严格 14-21 个汉字",
+    "notesFields": "top / heart / base 对照香水时代官方三调表校准，每行 <= 21 个汉字",
+    "poeticField": "<= 26 个汉字",
+    "prohibitions": [
+      "严禁出现任何小样容量/数量词（1ml/0.5ml/2.5ml/1.5ml/9ml/ml/×1/×2/3支/小样/试管/分装/跨单合并/待确认）",
+      "严禁出现 Emoji 图标",
+      "严禁出现散落英文单词（scanUnlocalizedText 必须返回 0 命中）"
+    ]
+  },
+  "items": [
+    {
+      "id": "hermes-terre",
+      "index": 1,
+      "brandZh": "爱马仕",
+      "brandEn": "Hermes",
+      "nameZh": "大地 EDT",
+      "nameEn": "Terre d'Hermès EDT",
+      "concentration": "EDT",
+      "uiScentFamily": "木质辛香调",
+      "palette": {
+        "primary": "#9C4A2F",
+        "soft": "#F6ECE6"
+      },
+      "nosetime": {
+        "title": "爱马仕 大地 Hermes Terre d'Hermes|香水评论|香调|价格|味道|香评|评价|-香水时代NoseTime.com",
+        "url": "https://www.nosetime.com/xiangshui/449262.html",
+        "hostVerified": true,
+        "ratingScore": 9.4,
+        "ratingCount": 80580,
+        "scentFamily": "辛辣木质调",
+        "officialNotes": {
+          "top": "橙子、葡萄柚",
+          "heart": "胡椒、天竺葵属、火石",
+          "base": "香根草、雪松、广藿香、安息香脂"
+        },
+        "longevityConsensus": "74%（30032 票；皮肤留香约 6 小时以上，喷于衣物留香更久）",
+        "sillageConsensus": "站内无独立扩散度进度条；社区普遍反馈扩散较明显，密闭空间（电梯、近距离借衣）存在感强",
+        "topUserQuotes": {
+          "positive": [
+            "夕音鑫（69赞）：作为晕水生的人来说，这真的是我目前最喜欢的男香了，闻着就沉稳，很适合通勤。",
+            "yuwangbian（329赞）：建议大家先收EDT版本……刚喷出来酒精浓重，等待十几秒酒精散去，新鲜的杉木迸发出来……留香6小时左右，一年四季皆可用。",
+            "向日葵小柯（60赞）：轻轻喷洒在腕间，颈部，耳后，葡萄柚的味道倾然而出……适合搭配帅气西装或干净白T恤。",
+            "K（117赞）& R夫人（59赞）：天气冷下来裹着围巾喷上大地有温暖安全感；适合秋冬季，风衣大衣皆可配搭。"
+          ],
+          "negativeOrCaveat": [
+            "K（117赞）：夏天喷感觉会有些闷热感。",
+            "至北冥（61赞）/ 茉香（655赞）/ Irene小艾（321赞）：喷在衣服上喷得太多会像生姜、理发店味熏晕；有人吐槽像六味地黄丸、前调柑橘辛辣刺鼻。"
+          ],
+          "rawQuotes": [
+            "夕音鑫（69赞）：作为晕水生的人来说，这真的是我目前最喜欢的男香了，闻着就沉稳，很适合通勤。",
+            "yuwangbian（329赞）：建议大家先收EDT版本……刚喷出来酒精浓重，等待十几秒酒精散去，新鲜的杉木迸发出来……留香6小时左右，一年四季皆可用。",
+            "向日葵小柯（60赞）：轻轻喷洒在腕间，颈部，耳后，葡萄柚的味道倾然而出……适合搭配帅气西装或干净白T恤。",
+            "K（117赞）& R夫人（59赞）：夏天喷感觉会有些闷热感，天气冷下来裹着围巾喷上大地有温暖安全感；适合秋冬季，风衣大衣皆可配搭。",
+            "至北冥（61赞）/ 茉香（655赞）/ Irene小艾（321赞）：喷在衣服上喷得太多会像生姜、理发店味熏晕；有人吐槽像六味地黄丸、前调柑橘辛辣刺鼻。"
+          ]
+        }
+      },
+      "socialSources": [
+        {
+          "site": "小红书",
+          "title": "《大地只能喷一下》（55赞，83评论）",
+          "url": "https://www.xiaohongshu.com/explore/6a923c5d000000002a03df69?xsec_token=ABR6bG_HdXO2dXUadZVDYcEQGeS7K5xMMsvl_GJ4pIBUY=&xsec_source=pc_search&source=web_search_result_notes",
+          "hostVerified": true
+        },
+        {
+          "site": "小红书",
+          "title": "《大地香水不持久？这五招让你爱上它》",
+          "url": "https://www.xiaohongshu.com/explore/6964ff2600000000210335c9?xsec_token=ABKvbA0FI6vsV3D6ZvPsd0oQns5WXAsrMxBkgrGByClz4=&xsec_source=pc_search&source=web_search_result_notes",
+          "hostVerified": true
+        },
+        {
+          "site": "小红书",
+          "title": "《爱马仕大地全线5瓶香水怎么选，一次听明白》（493赞，98评论）",
+          "url": "https://www.xiaohongshu.com/explore/6af4c16a000000002b013f53?xsec_token=AB-LfoGIH6C-mei8yFRUYEqTmSWD4kvRtzK2_LpIKuAUE=&xsec_source=pc_search&source=web_search_result_notes",
+          "hostVerified": true
+        },
+        {
+          "site": "小红书",
+          "title": "《不同社交距离用什么香｜男生体面香单》（94赞）",
+          "url": "https://www.xiaohongshu.com/explore/6aedf696000000000901047c?xsec_token=ABNo-FqwwaNDHsXrRbwK8ILJXmmvzoBO4y-NQrMtIcIeI=&xsec_source=pc_search&source=web_search_result_notes",
+          "hostVerified": true
+        },
+        {
+          "site": "小红书",
+          "title": "《爱马仕 大地｜喜木火 你是懂气血的❤️》（154赞）",
+          "url": "https://www.xiaohongshu.com/explore/681ad26d000000000303fa12?xsec_token=ABSQBfqh2falDN6NlueDg2ErdxQt1zoJsek5RdH9xSX3E=&xsec_source=pc_search&source=web_search_result_notes",
+          "hostVerified": true
+        },
+        {
+          "site": "什么值得买",
+          "title": "《爱马仕大地：不是最惊艳，却是职场最稳的气味底气》",
+          "url": "https://post.smzdm.com/p/al3n9wq8/",
+          "hostVerified": true
+        },
+        {
+          "site": "什么值得买",
+          "title": "《男香天花板还是满街撞香？爱马仕大地值不值买》",
+          "url": "https://post.smzdm.com/p/aom070m9/",
+          "hostVerified": true
+        }
+      ],
+      "sourceStats": {
+        "totalSocialSources": 7,
+        "xiaohongshuCount": 5,
+        "smzdmCount": 2,
+        "hostVerifiedTrueCount": 7,
+        "hostVerifiedFalseCount": 0
+      },
+      "candidateReputationTags": [
+        "火石木质神作",
+        "只喷一泵更耐闻",
+        "过量易泛生姜味",
+        "秋冬风衣大衣",
+        "沉稳商务安全感",
+        "毛衣内衬锁香",
+        "前调酒精微冲",
+        "认准原版淡香"
+      ],
+      "rawTagPools": {
+        "nosetime": [
+          "辛辣木质",
+          "打火石矿石感",
+          "沉稳安全感",
+          "秋冬风衣大衣",
+          "白衬衫商务通勤",
+          "红花油生姜雷点",
+          "街香经典",
+          "喷腕耳后慎过量"
+        ],
+        "social": [
+          "职场最稳气味底气",
+          "只能喷一泵",
+          "火石木质柑橘",
+          "毛衣袖口锁香",
+          "男女通吃中性香",
+          "扩香克制体面",
+          "夏季出汗慎用",
+          "辨清原版淡香水"
+        ]
+      },
+      "fullCommunityGuides": {
+        "sprayMethods": {
+          "nosetimeInsights": [
+            "轻轻喷洒在腕间、颈部或耳后，让葡萄柚前调与木质中后调自然透出。",
+            "刚喷出时酒精感较浓，等待十几秒酒精挥发散去后再感受新鲜杉木与矿石木质气息。",
+            "切勿直接大量喷在衣物上，衣物喷多容易泛出生姜或理发店味从而熏晕自己与旁人。",
+            "在电梯等密闭空间存在感较强，日常通勤建议控制泵数以保持沉稳体面的距离感。"
+          ],
+          "socialMethods": [
+            "严格控量一泵贴肤法：手腕内侧、耳后或锁骨处轻喷 1 下后静待十余秒散去前调酒精，利用体温缓慢烘出葡萄柚与雪松矿石木质调，避免喷 3 下导致广藿香发闷甚至发臭。",
+            "隔夜大衣与毛衣内衬法：提前一晚或穿衣前喷 1–2 泵在西装内衬、毛衣袖口内侧或裙摆内侧，织物纤维可把留香拉长至 6–36 小时且挥发干净不冲面，适合职场体面近距社交（约 0.8 米）。",
+            "沐浴半干身体乳打底法：洗完澡毛孔微张、皮肤半干时先涂无香大白罐身体乳或凡士林锁水保湿，再于锁骨或手肘内侧点喷 1 泵，可明显柔化胡椒辛辣冲感并让木质尾调更贴肤持久。",
+            "高空香雾走入法：若担心前调胡椒与柑橘在密闭空间存在感过强，可向斜上方 15–20 厘米空中喷出 1–2 泵香雾后快速走入，让香气薄而均匀地落在肩颈与衣物表面，切忌双腕对搓以免压碎柑橘前调。"
+          ]
+        },
+        "outfitPairings": {
+          "nosetimeInsights": [
+            "适合搭配帅气西装、风衣、大衣或干净白T恤，突出沉稳可靠的商务或日常气质。",
+            "秋冬季节裹上围巾穿大衣时穿戴尤具温暖安全感，较夏季更具氛围契合度。",
+            "职场日常通勤适配度高，也是晕水生调人群接受度较高的经典男香选择。",
+            "夏季高温环境下穿戴容易出现闷热感，热天建议减少用量或改选其他季节。"
+          ],
+          "socialPairings": [
+            "利落通勤商务正装：挺括羊毛西装外套搭配高支棉白衬衫与直筒西裤，选用黑、白、炭灰或深藏青色系，适配春秋及冬季职场通勤与商务谈判，衬托沉稳克制的领导力与专业底气。",
+            "老钱风知识分子穿搭：软糯羊绒针织毛衣或双面呢风衣内搭素色棉质衬衫配卡其休闲裤，选用大地棕、驼色、燕麦灰等中性色，适合深秋与寒冬约会、看展或晚宴，放大温暖干燥木质安全感。",
+            "女生中性清冷酷飒风：廓形西装或机车皮衣、硬挺斜纹工装外套搭配直筒牛仔裤，黑灰与军绿或深棕撞色，适合秋冬出街与城市漫步，打造雌雄莫辨的清冷疏离高级感。",
+            "极简松弛周末休闲风：重磅纯棉基础款白短袖或灰调卫衣配工装休闲裤，黑白灰低饱和色系，适合春末及初秋咖啡馆阅读或轻社交聚会，呈现不刻意的高级松弛感。"
+          ]
+        },
+        "practicalTips": {
+          "nosetimeTips": [
+            "认准 2006 年原版 EDT 淡香水（高赞长评亦建议先收 EDT 版本），避免混入香精版 Parfum 或泠冽之水。",
+            "试香不要只闻前十几秒的辛辣柑橘与酒精冲感，需耐心观察中后调雪松与香根草的过渡。",
+            "高赞负评提及生姜、红花油、理发店及六味地黄丸等药感雷区，敏感人群务必试香后再入手。",
+            "衣物留香明显长于皮肤且扩散度偏高，初次穿戴从低泵数开始测试旁人反馈。"
+          ],
+          "socialTips": [
+            "严防过量与夏季暴汗翻车：原版 EDT 前调胡椒辛辣冲鼻，喷 3 下易显油腻、生姜味或樟脑药感；30℃ 以上盛夏户外汗液混合广藿香容易闷臭，夏季建议极少点涂或改用霜冻版（Eau Givrée）。",
+            "购前务必核对瓶身版本标识：认准瓶身与外盒标注 Eau de Toilette 的经典原版淡香水，切勿盲买成药感更沉、偏老气的香精版（Parfum）或草本调突出的馥郁香根草版。",
+            "留香补救与防晒避敏操作：若觉前调刺鼻可静候 10–15 秒待酒精散去，先涂无香身体乳再喷衣物内衬可拉长留香至 6–36 小时；因含柑橘精油，强紫外线下尽量喷衣物内侧避免暴晒皮肤产生光敏反应。",
+            "先试两天全调过渡与避假渠道：建议先用分装或专柜试香观察 2 天完整前中后调过渡（确认能否接受火石与泥土气息）；热销大爆款线上低价假货多，远低于专柜五折的非授权渠道需谨慎避雷。"
+          ]
+        }
+      },
+      "uiCardCopy": {
+        "reputationTags": [
+          "火石木质神作",
+          "只喷一泵更耐闻",
+          "过量易泛生姜味"
+        ],
+        "poetic": "苦橘散后透出火石与雪松暖意，像沉稳靠得住的冬日大衣",
+        "notes": {
+          "top": "橙子 · 葡萄柚",
+          "heart": "胡椒 · 天竺葵 · 火石",
+          "base": "香根草 · 雪松 · 广藿香 · 安息香"
+        },
+        "wearingGuide": {
+          "spray": "隔夜限喷1泵于西装内衬或毛衣袖口",
+          "outfit": "羊毛西装或羊绒大衣配白衬衫秋冬通勤",
+          "tip": "等酒精散后再闻，认准原版且盛夏少喷"
+        }
+      }
+    },
+    {
+      "id": "jo-malone-wild-bluebell",
+      "index": 2,
+      "brandZh": "祖玛珑",
+      "brandEn": "Jo Malone London",
+      "nameZh": "蓝风铃",
+      "nameEn": "Wild Bluebell",
+      "concentration": "EDC",
+      "uiScentFamily": "绿叶水生花香调",
+      "palette": {
+        "primary": "#3E6B89",
+        "soft": "#EAF1F5"
+      },
+      "nosetime": {
+        "title": "祖玛珑 蓝风铃 Jo Malone Wild Bluebell|香水评论|香调|价格|味道|香评|评价|-香水时代NoseTime.com",
+        "url": "https://www.nosetime.com/xiangshui/263426.html",
+        "hostVerified": true,
+        "ratingScore": 8.2,
+        "ratingCount": 45792,
+        "scentFamily": "绿叶花香调",
+        "officialNotes": {
+          "top": "风铃草、露珠、绿叶、公丁香",
+          "heart": "柿子、桃子",
+          "base": "麝香、脂粉味"
+        },
+        "longevityConsensus": "48%（14800 票；留香偏短，社区普遍吐槽为“三步散/五步散”）",
+        "sillageConsensus": "站内无独立扩散度进度条；扩散弱且极贴肤，喷后约 10 分钟需贴近皮肤细闻",
+        "topUserQuotes": {
+          "positive": [
+            "染香轻醉/招财猫（1337赞）：干干净净的冰镇西瓜味……店长说蓝风铃很喜欢但不会单独使用，混搭或用蓝风铃润肤乳打底能直到深夜回家依然坚挺。",
+            "高赞长评共识：夏天抓起来就能喷（冬天几乎不能用），适合慵懒夏天穿特别简单的衣服；学生白领通勤不扰人。"
+          ],
+          "negativeOrCaveat": [
+            "TOMMY（热评前排）：刚喷出来别凑上去细闻，细节缺失加甜度易有化工感和水生雷区，后调更好，缺点是留香扩散差。",
+            "Venus as a boy（269赞）/ 上杉夏香（231赞）：廉价空气清新剂味仿佛进名创优品；像切西瓜后的刀味。"
+          ],
+          "rawQuotes": [
+            "染香轻醉/招财猫（1337赞）：干干净净的冰镇西瓜味……店长说蓝风铃很喜欢但不会单独使用，混搭或用蓝风铃润肤乳打底能直到深夜回家依然坚挺。",
+            "TOMMY（热评前排）：刚喷出来别凑上去细闻，细节缺失加甜度易有化工感和水生雷区，后调更好，缺点是留香扩散差。",
+            "Venus as a boy（269赞）/ 上杉夏香（231赞）：廉价空气清新剂味仿佛进名创优品；像切西瓜后的刀味。",
+            "高赞长评共识：夏天抓起来就能喷（冬天几乎不能用），适合慵懒夏天穿特别简单的衣服；学生白领通勤不扰人。"
+          ]
+        }
+      },
+      "socialSources": [
+        {
+          "site": "小红书",
+          "title": "《祖玛珑叠喷公式大公开！3步喷出高定香！》（343赞）",
+          "url": "https://www.xiaohongshu.com/explore/68020c17000000000900fb58?xsec_token=AB6_D2EaXGB7C4gfygZb4-JAtNy8Q2Z4bJQQlsQcOzIQs=&xsec_source=pc_search&source=web_search_result_notes",
+          "hostVerified": true
+        },
+        {
+          "site": "小红书",
+          "title": "《私藏祖玛珑混搭公式｜温柔独特的惊艳新体验》（548赞）",
+          "url": "https://www.xiaohongshu.com/explore/68ba5a54000000001d038400?xsec_token=AB75x4kii7xiF1GpjuIESL9I7sS3aOgsLZzeDzx0402kA=&xsec_source=pc_search&source=web_search_result_notes",
+          "hostVerified": true
+        },
+        {
+          "site": "小红书",
+          "title": "《超级纯正的大美女香！！》（1220赞）",
+          "url": "https://www.xiaohongshu.com/explore/69fc48de000000001f003b7a?xsec_token=AB_Y4eOtWtTZNXOBPFOp8zUa0n1yCt0AHvo-aYDvJqeC0=&xsec_source=pc_search&source=web_search_result_notes",
+          "hostVerified": true
+        },
+        {
+          "site": "什么值得买",
+          "title": "什么值得买社区实测文章（p/az8x506r）",
+          "url": "https://post.smzdm.com/p/az8x506r/",
+          "hostVerified": true
+        },
+        {
+          "site": "什么值得买",
+          "title": "什么值得买社区实测文章（p/apqovkk9）",
+          "url": "https://post.smzdm.com/p/apqovkk9/",
+          "hostVerified": true
+        },
+        {
+          "site": "什么值得买",
+          "title": "什么值得买社区实测文章（p/a6zleg9z）",
+          "url": "https://post.smzdm.com/p/a6zleg9z/",
+          "hostVerified": true
+        }
+      ],
+      "sourceStats": {
+        "totalSocialSources": 6,
+        "xiaohongshuCount": 3,
+        "smzdmCount": 3,
+        "hostVerifiedTrueCount": 6,
+        "hostVerifiedFalseCount": 0
+      },
+      "candidateReputationTags": [
+        "冰镇西瓜水感",
+        "五步散伪体香",
+        "身体乳打底延香",
+        "切西瓜刀味争议",
+        "夏日白裙校园风",
+        "叠喷提亮好基底",
+        "密闭空间零压迫",
+        "刚喷别凑近闻"
+      ],
+      "rawTagPools": {
+        "nosetime": [
+          "冰镇西瓜",
+          "切西瓜的刀",
+          "五步散三步散",
+          "夏日轻衣不扰人",
+          "水生化工感",
+          "名创优品撞味",
+          "润肤乳混搭延香",
+          "刚喷别凑近闻"
+        ],
+        "social": [
+          "五步散",
+          "氧气感伪体香",
+          "冰镇西瓜感",
+          "叠喷提亮基底",
+          "针织围巾锁香",
+          "初恋感纯净穿搭",
+          "密闭空间零压迫",
+          "身体乳打底延香"
+        ]
+      },
+      "fullCommunityGuides": {
+        "sprayMethods": {
+          "nosetimeInsights": [
+            "单喷古龙水留香较短，可先使用同款润肤乳打底再喷香水，能延长留香至深夜回家仍可闻。",
+            "不少资深香友与专柜建议不单独使用，可与其他香水混搭叠喷以丰富层次并补足留香。",
+            "刚喷出瞬间不要凑近皮肤猛闻，先等待前调散开后再体验更柔顺的后调花香。",
+            "喷后约 10 分钟转为贴肤微扩散，适合日常随手多喷而无需担心在室内扰人。"
+          ],
+          "socialMethods": [
+            "衣物纤维重泵锁香法：古龙水（EDC）在皮肤上仅留香约 3–4.2 小时，建议重点喷 4–5 泵在针织袖口、羊毛围巾、衣领或发梢（避开浅色真丝防留渍），织物纤维可将留香延长至 6–8 小时。",
+            "无香身体乳三明治打底法：沐浴后先在手腕、耳后与颈动脉处涂抹蓝风铃同系列润肤霜或无香身体乳/凡士林打底，趁皮肤湿润再喷 2–3 泵，利用油脂锁香可将留香延长 1–2 小时。",
+            "高赞三步叠喷增厚法：先在皮肤或衣物打底 1–2 泵《英国梨与小苍兰》或《鼠尾草与海盐》（亦可用黑瓶木质香打底），再叠喷 2–3 泵蓝风铃提亮，既保留冰镇西瓜清甜又弥补中后调单薄。",
+            "自然晾干与随身补喷法：喷洒后切勿双腕揉搓以免破坏露水绿意前调；外出建议随身携带便携分装，每隔 3–4 小时在裙摆内侧或发尾补喷 1–2 泵维持干净体香感。"
+          ]
+        },
+        "outfitPairings": {
+          "nosetimeInsights": [
+            "高度契合夏季日常，尤其适合慵懒夏日穿着特别简单的基础款浅色衣物随手穿戴。",
+            "学生校园上课与白领日常通勤均很安全，清淡不扰人。",
+            "干净透亮的冰镇西瓜感适合白天休闲出行，带来轻松清凉氛围。",
+            "冬季几乎不适用，寒冷天气下散香弱、存在感极低。"
+          ],
+          "socialPairings": [
+            "初恋白衬衫与牛仔校园风：清爽纯棉短袖、浅蓝牛津纺衬衫搭配浅水洗直筒牛仔裤与帆布鞋，亮白配天空蓝系，最适合春夏季节校园教室、图书馆自习与闺蜜逛街，零压迫自带干净青春气。",
+            "氧气森系棉麻连衣裙：高透气亚麻或纯棉材质的米白、浅绿、淡蓝碎花长裙与茶歇裙，轻薄飘逸面料，适合炎热夏季户外野餐、公园漫步与海边度假，将冰镇西瓜水感清凉发挥到极致。",
+            "无害邻家薄针织开衫：轻薄天丝或冰丝针织开衫配半身纱裙，选用奶白、浅杏、莫兰迪浅色系，适配春末及初夏室内通勤、电梯地铁与近距办公，扩香克制在一米内绝不扰人。",
+            "叠喷过渡轻风衣通勤装：初秋或空调房内穿轻薄风衣、羊绒开衫搭配素色衬衫时（米白、浅灰系），需先用木质或果香叠喷增厚再搭配蓝风铃，避免在低温环境下显得过于单薄清冷。"
+          ]
+        },
+        "practicalTips": {
+          "nosetimeTips": [
+            "社区最明显气味投票首位为西瓜（38%），对水生调或化工清甜感易晕者需谨慎试香。",
+            "高赞差评明确提到“名创优品空气清新剂感”和“切西瓜后的刀味”，建议试闻后再决定是否购买。",
+            "48% 的留香投票印证其属于典型短留香古龙水（“三步散/五步散”），购买前需接受补喷或打底需求。",
+            "试香时跳过前几分钟的直冲甜水感，重点评估 10 分钟后贴肤阶段是否符合个人喜好。"
+          ],
+          "socialTips": [
+            "接纳“五步散”短留香并做好补救：作为古龙水在手腕通常仅撑 3–4 小时，追求“一喷香整天”或强扩香者慎入；需依赖“身体乳打底 + 喷织物围巾 + 叠喷 + 便携补香”组合延香。",
+            "警惕水生调与化工西瓜味雷点：配方中并不含真实蓝风铃花，而是通过西瓜酮等成分模拟露水清甜；对水生调敏感者刚喷出时切忌凑近手腕猛吸，否则易闻出空气清新剂或切西瓜刀味而晕香。",
+            "避免严寒户外与正式晚宴单穿：秋冬季节户外低温及正式晚宴场合单穿气场会显得单薄冰冷，建议仅作为叠喷提亮层配合暖调香水使用。",
+            "先试小样再入手正规正装：网红大热香线上仿货极多，且个人对西瓜水感的接受度差异很大，切勿盲入大容量正装，应先用分装确认不发腻后再走专柜或授权官方渠道。"
+          ]
+        }
+      },
+      "uiCardCopy": {
+        "reputationTags": [
+          "冰镇西瓜水感",
+          "五步散伪体香",
+          "身体乳打底延香"
+        ],
+        "poetic": "露水浸着冰镇西瓜与绿叶，像穿白棉裙遇见的夏夜风",
+        "notes": {
+          "top": "风铃草 · 露珠 · 绿叶 · 公丁香",
+          "heart": "柿子 · 桃子",
+          "base": "麝香 · 脂粉味"
+        },
+        "wearingGuide": {
+          "spray": "润肤乳打底后，裙摆或针织袖口喷4至5泵",
+          "outfit": "纯棉白衬衫配牛仔或亚麻连衣裙春夏穿",
+          "tip": "古龙水留香较短，勿刚喷凑近闻防化工感"
+        }
+      }
+    },
+    {
+      "id": "prada-paradoxe",
+      "index": 3,
+      "brandZh": "普拉达",
+      "brandEn": "Prada",
+      "nameZh": "我本莫测",
+      "nameEn": "Paradoxe",
+      "concentration": "EDP",
+      "uiScentFamily": "琥珀白花调",
+      "palette": {
+        "primary": "#9E5640",
+        "soft": "#F7ECE8"
+      },
+      "nosetime": {
+        "title": "普拉达 我本莫测 Prada Paradoxe|香水评论|香调|价格|味道|香评|评价|-香水时代NoseTime.com",
+        "url": "https://www.nosetime.com/xiangshui/397068.html",
+        "hostVerified": true,
+        "ratingScore": 6.7,
+        "ratingCount": 4846,
+        "scentFamily": "花香东方调",
+        "officialNotes": {
+          "top": "梨、蜜橘、香柠檬",
+          "heart": "橙花、橙花油、茉莉",
+          "base": "香草、琥珀、麝香、安息香脂"
+        },
+        "longevityConsensus": "79%（1777 票；留香极持久，下午两三点依然清晰可闻）",
+        "sillageConsensus": "站内无独立扩散度进度条；社区反馈扩香呈“爆炸”级，喷两小喷整个超市都能闻到",
+        "topUserQuotes": {
+          "positive": [
+            "☁（32赞）：甜的恰到好处……像繁华街巷里穿着可爱蓬蓬裙提着奶油蛋糕喝柠檬苏打水的小公主。",
+            "知恵（4赞）：作为男生约会真的很好，第一次约会对象就喷这个，开车时满是橙花甜味，风吹过一直想闻。"
+          ],
+          "negativeOrCaveat": [
+            "小兔子乖乖（7赞）：扩香超级强，喷两小喷进超市整个超市都是，两小时内鼻尖也全是它，下手过重会熏到人。",
+            "纵明明（42赞）/ 暴躁老哥约瑟夫卡（87赞）/ 上善若2H₂O🥑（30赞）：没有玫瑰香还好只买试管；像化工水生皂感糖精爆炸；很像YSL自由之水加阿玛尼自我无界。"
+          ],
+          "rawQuotes": [
+            "☁（32赞）：甜的恰到好处……像繁华街巷里穿着可爱蓬蓬裙提着奶油蛋糕喝柠檬苏打水的小公主。",
+            "知恵（4赞）：作为男生约会真的很好，第一次约会对象就喷这个，开车时满是橙花甜味，风吹过一直想闻。",
+            "小兔子乖乖（7赞）：扩香超级强，喷两小喷进超市整个超市都是，两小时内鼻尖也全是它，下手过重会熏到人。",
+            "纵明明（42赞）/ 暴躁老哥约瑟夫卡（87赞）/ 上善若2H₂O🥑（30赞）：没有玫瑰香还好只买试管；像化工水生皂感糖精爆炸；很像YSL自由之水加阿玛尼自我无界。"
+          ]
+        }
+      },
+      "socialSources": [
+        {
+          "site": "小红书",
+          "title": "《每日穿香｜我的莫测》（1963赞）",
+          "url": "https://www.xiaohongshu.com/explore/6437efca00000000130360a8?xsec_token=ABQWBbDp6ITpIpNrq86FH0Iizzdbxtg7aXaM46y1fMpmE=&xsec_source=pc_search&source=web_search_result_notes",
+          "hostVerified": true
+        },
+        {
+          "site": "小红书",
+          "title": "《建议职场低能量女生人手一瓶》（1323赞）",
+          "url": "https://www.xiaohongshu.com/explore/6a0ff78c000000003501e52e?xsec_token=ABC9iNzRc6kIMgDcz_WaHhNPT_uPbi-AS5BGtU1HmFho4=&xsec_source=pc_search&source=web_search_result_notes",
+          "hostVerified": true
+        },
+        {
+          "site": "小红书",
+          "title": "《Prada新香盲买踩雷了吗？》（914赞）",
+          "url": "https://www.xiaohongshu.com/explore/6ab38002000000000b004478?xsec_token=ABJJxbw399Cr9Vbf5N3tKYhOO38kCDWmGzxJy-YCs1cXQ=&xsec_source=pc_search&source=web_search_result_notes",
+          "hostVerified": true
+        },
+        {
+          "site": "小红书",
+          "title": "《喷两下把自己熏死》（155赞，177评论）",
+          "url": "https://www.xiaohongshu.com/explore/6972ccfb000000001a0279a9?xsec_token=ABwPQARFgBjiafwyMB4Z20YzzFKpDHeqSkGKZM1MdJWOM=&xsec_source=pc_search&source=web_search_result_notes",
+          "hostVerified": true
+        },
+        {
+          "site": "什么值得买",
+          "title": "什么值得买社区实测文章（p/axk73rz3）",
+          "url": "https://post.smzdm.com/p/axk73rz3/",
+          "hostVerified": true
+        }
+      ],
+      "sourceStats": {
+        "totalSocialSources": 5,
+        "xiaohongshuCount": 4,
+        "smzdmCount": 1,
+        "hostVerifiedTrueCount": 5,
+        "hostVerifiedFalseCount": 0
+      },
+      "candidateReputationTags": [
+        "扩香炸裂少喷",
+        "奶油香草橙花",
+        "氧化变黄属正常",
+        "香雾穿行防熏晕",
+        "高智感职场甜酷",
+        "像自由之水争议",
+        "重糖白花易踩雷",
+        "先试后买正装"
+      ],
+      "rawTagPools": {
+        "nosetime": [
+          "甜腻白花香草",
+          "扩散爆炸慎多喷",
+          "蓬蓬裙甜美约会",
+          "欧莱雅商业模板",
+          "撞香自由之水",
+          "奶油橙花",
+          "浓烈脂粉",
+          "慎盲入先试香"
+        ],
+        "social": [
+          "奶感木质橙花",
+          "只喷一泵香三天",
+          "扩香巨强易熏晕",
+          "空中香雾穿行",
+          "刚柔矛盾美学",
+          "高智感职场香",
+          "像自由之水",
+          "液体氧化变黄正常"
+        ]
+      },
+      "fullCommunityGuides": {
+        "sprayMethods": {
+          "nosetimeInsights": [
+            "扩香超级强悍，实测喷两小喷进超市可满场飘香且两小时内鼻尖全程浓郁，日常务必减至极少量。",
+            "下手过重极易熏到自己与周围人，建议避开胸前及近鼻位置，仅在远离面部处轻喷 1 小喷。",
+            "约会或室外微风乘车场景下，少量喷洒即可凭借强扩散形成明显甜美橙花存在感。"
+          ],
+          "socialMethods": [
+            "极限单泵三角点涂法：原版 EDP 扩散与留香极具侵略性，日常工位或室内通勤严格限定仅喷 1 泵于一侧手腕，再轻点耳后与锁骨形成亲密三角区，切忌喷 2 下以上以免熏晕自己和同事。",
+            "空中香雾穿行柔化法：针对前调梨与蜜橘偏冲、易显甜腻的特点，向头顶前方高空喷洒 1–2 泵形成香雾后迈步穿行，让雾化香气薄薄落在发丝和外套表层，大幅削弱压迫感。",
+            "提前隔夜衣物熏香法：提前一晚向次日要穿的羊毛大衣内衬、西装内侧或裙摆喷 1 泵，经过整夜自然散去前调高糖感，次日上身直接呈现温柔贴肤的橙花奶木与白麝香尾调。",
+            "后颈低位隐香喷法：约会场景可在后颈发际线下方轻点 1 泵，借助体温在走动或靠近时散出暖甜琥珀与波本香草气息，同时避免香气直冲鼻腔引发晕香。"
+          ]
+        },
+        "outfitPairings": {
+          "nosetimeInsights": [
+            "适合蓬蓬裙等甜美可爱风穿搭，营造奶油蛋糕与柠檬苏打水般的繁华街巷小公主氛围。",
+            "约会与晚间户外出行表现突出，男生高赞评价反馈吹风时满是橙花甜味令人印象深刻。",
+            "商超等较大空间存在感极强，而高密度密闭职场或狭窄室内需严控用量以免压迫旁人。"
+          ],
+          "socialPairings": [
+            "高智感精英职场套装：垂坠感羊毛廓形西装或羊绒大衣内搭丝绸吊带与直筒西裤，黑、白、灰、燕麦奶白或摩卡棕高级中性色系，适合秋冬季与空调房职场通勤，提气色拯救低能量“班味”。",
+            "刚柔碰撞甜酷反差装：硬朗哑光皮革机车夹克或短款小香风粗花呢外套，混搭柔滑缎面针织裙与皮靴，黑粉或黑白撞色，呼应可侧放三角瓶身的反差美学，适合秋冬街拍、派对与重要约会。",
+            "法式慵懒温柔约会裙：软糯羊绒针织开衫或修身法式茶歇裙配乐福鞋，奶白、香槟米、浅裸粉色系，适配春秋冬三季夜晚约会或下午茶，后调香草琥珀贴肤后极富柔和魅惑氛围。",
+            "摩登轻通勤丝滑衬衫风：真丝雪纺衬衫配高腰微喇西裤与尖头高跟鞋，象牙白配浅卡其色系，适合四季恒温写字楼商务场合，用清亮橙花中和正装的刻板与距离感。"
+          ]
+        },
+        "practicalTips": {
+          "nosetimeTips": [
+            "香水时代评分 6.7 分且口碑两极分化较大，高赞评论普遍建议先从试管试香入手，切忌盲入大瓶。",
+            "社区常见吐槽集中于“化工水生皂感糖精爆炸”及浓烈脂粉香草味，非甜香及白花爱好者极易踩雷。",
+            "气味被多条热评指出与 YSL 自由之水、阿玛尼自我无界高度相似，已有同集团商业白花香可先比对。",
+            "认准 2022 年原版 EDP（79% 留香投票极为持久），勿与 Intense 馥郁版混淆。"
+          ],
+          "socialTips": [
+            "重度控量防晕，工位严禁连喷：实测工位喷 2 下就能香透整片空间甚至熏晕本人，切勿贴颈狂喷；室内密闭场合必须限用 1 泵或改用提前一晚喷衣法。",
+            "粉色液体氧化变黄属正常现象：因含香草与琥珀成分，经典珊瑚粉色液体开封久放或见光后逐渐氧化为橙黄或浅琥珀色属于正常自然现象，并非变质或假货。",
+            "严分系列衍生版防买错版本：购买前核对经典原版 EDP（粉水黑盖可侧放三角瓶），注意区分浓度更沉厚甜暖的浓情版（Intense）以及花境版等衍生支线。",
+            "给足 10 分钟前中调过渡再决策：刚喷出时糖感白花较明显，且社区常对比其与《自由之水》或《自我无界》的商业花香模板感；易晕甜腻白花者务必先买试管，体会 10 分钟后进入白麝香奶木尾调再买正装。"
+          ]
+        }
+      },
+      "uiCardCopy": {
+        "reputationTags": [
+          "扩香炸裂少喷",
+          "奶油香草橙花",
+          "氧化变黄属正常"
+        ],
+        "poetic": "脆梨撞入奶润橙花与暖意香草，甜得亮眼又带点反差俏皮",
+        "notes": {
+          "top": "梨 · 蜜橘 · 香柠檬",
+          "heart": "橙花 · 橙花油 · 茉莉",
+          "base": "香草 · 琥珀 · 麝香 · 安息香脂"
+        },
+        "wearingGuide": {
+          "spray": "走入1泵空中香雾或隔夜喷衣防熏晕",
+          "outfit": "软糯针织或皮衣配缎面裙秋冬约会通勤",
+          "tip": "扩香极强先试再入，液体氧化变黄正常"
+        }
+      }
+    },
+    {
+      "id": "armani-my-way",
+      "index": 4,
+      "brandZh": "阿玛尼",
+      "brandEn": "Giorgio Armani",
+      "nameZh": "自我无界",
+      "nameEn": "My Way",
+      "concentration": "EDP",
+      "uiScentFamily": "明亮白花调",
+      "palette": {
+        "primary": "#B04E64",
+        "soft": "#F9ECEF"
+      },
+      "nosetime": {
+        "title": "阿玛尼 自我无界 Giorgio Armani My Way|香水评论|香调|价格|味道|香评|评价|-香水时代NoseTime.com",
+        "url": "https://www.nosetime.com/xiangshui/202123.html",
+        "hostVerified": true,
+        "ratingScore": 8.2,
+        "ratingCount": 32151,
+        "scentFamily": "花香调",
+        "officialNotes": {
+          "top": "橙花、香柠檬",
+          "heart": "晚香玉、茉莉",
+          "base": "香草、麝香、雪松"
+        },
+        "longevityConsensus": "76%（10615 票；留香极为持久，喷洒后隔天依然能闻到余香）",
+        "sillageConsensus": "站内无独立扩散度进度条；社区反馈留香与扩香均极突出，喷一下即可香一整天",
+        "topUserQuotes": {
+          "positive": [
+            "Heart（75赞）：喷上我就是多肉葡萄！感觉喝了一整杯喜茶多肉葡萄。",
+            "格子lulaaa（152赞）：留香扩香绝绝子，喷一下香一天完全没问题！",
+            "二三（52赞）：一个晕吲哚的我居然挺喜欢，里面没有吲哚。",
+            "sesame（360赞）：热情洋溢的青春美少女爱吃水果略施脂粉。"
+          ],
+          "negativeOrCaveat": [
+            "格子lulaaa（152赞）/ 보고싶어요（27赞）：受不了白花的要慎重考虑；建议去柜台试香再决定。",
+            "Thãrâsa（130赞）/ Bleuviolence（34赞）/ 菠萝土豆（55赞）：葡萄散掉后的晚香玉太腻；试香纸一泵就甜到天旋地转，后调变康师傅茉莉蜜茶，多喷齁甜。"
+          ],
+          "rawQuotes": [
+            "Heart（75赞）：喷上我就是多肉葡萄！感觉喝了一整杯喜茶多肉葡萄。",
+            "格子lulaaa（152赞）：留香扩香绝绝子，喷一下香一天完全没问题！受不了白花的要慎重考虑。",
+            "二三（52赞）：一个晕吲哚的我居然挺喜欢，里面没有吲哚。",
+            "sesame（360赞）/ 보고싶어요（27赞）：热情洋溢的青春美少女爱吃水果略施脂粉；建议去柜台试香再决定。",
+            "Thãrâsa（130赞）/ Bleuviolence（34赞）/ 菠萝土豆（55赞）：葡萄散掉后的晚香玉太腻；试香纸一泵就甜到天旋地转，后调变康师傅茉莉蜜茶，多喷齁甜。"
+          ]
+        }
+      },
+      "socialSources": [
+        {
+          "site": "小红书",
+          "title": "《阿玛尼自我无界香水到底适不适合你？》（80赞）",
+          "url": "https://www.xiaohongshu.com/explore/6ad579eb000000002701e2f6?xsec_token=ABwcmcZP62gqJmYXpPAUgiaZLuvmdAMSVVKaZEH6OQOPo=&xsec_source=pc_search&source=web_search_result_notes",
+          "hostVerified": true
+        },
+        {
+          "site": "小红书",
+          "title": "《没人告诉我味道这么大啊…》（40赞，60评论）",
+          "url": "https://www.xiaohongshu.com/explore/69ca1d52000000002301fe11?xsec_token=ABEY4dWGW4_rsSzU343Gxuhy_xCdRiNWOyQf_mf3G-0zg=&xsec_source=pc_search&source=web_search_result_notes",
+          "hostVerified": true
+        },
+        {
+          "site": "小红书",
+          "title": "《关于阿玛尼自我……我有话想说……》（135赞）",
+          "url": "https://www.xiaohongshu.com/explore/6a92804a000000002903c474?xsec_token=ABR6bG_HdXO2dXUadZVDYcEUTh79h4ODW0nHAvFuVLdGk=&xsec_source=pc_search&source=web_search_result_notes",
+          "hostVerified": true
+        },
+        {
+          "site": "什么值得买",
+          "title": "什么值得买社区实测文章（p/avg6g69p）",
+          "url": "https://post.smzdm.com/p/avg6g69p/",
+          "hostVerified": true
+        },
+        {
+          "site": "什么值得买",
+          "title": "什么值得买社区实测文章（p/am9nrq5z）",
+          "url": "https://post.smzdm.com/p/am9nrq5z/",
+          "hostVerified": true
+        },
+        {
+          "site": "什么值得买",
+          "title": "什么值得买社区实测文章（p/aeo6kwxm）",
+          "url": "https://post.smzdm.com/p/aeo6kwxm/",
+          "hostVerified": true
+        }
+      ],
+      "sourceStats": {
+        "totalSocialSources": 6,
+        "xiaohongshuCount": 3,
+        "smzdmCount": 3,
+        "hostVerifiedTrueCount": 6,
+        "hostVerifiedFalseCount": 0
+      },
+      "candidateReputationTags": [
+        "多肉葡萄软糖",
+        "一泵香透一整天",
+        "晕晚香玉慎入",
+        "内衣内侧藏香法",
+        "力士幽莲沐浴感",
+        "法式碎花千金风",
+        "避喷真丝与首饰",
+        "严防多喷社死"
+      ],
+      "rawTagPools": {
+        "nosetime": [
+          "多肉葡萄软糖",
+          "晚香玉白花",
+          "一泵香一整天",
+          "齁甜糖水",
+          "晕晚香玉警告",
+          "茉莉蜜茶感",
+          "青春少女日常",
+          "柜台试香控泵"
+        ],
+        "social": [
+          "多肉葡萄软糖",
+          "力士幽莲沐浴露感",
+          "扩香大办公室慎用",
+          "内衣内侧藏香法",
+          "手腕轻按勿揉搓",
+          "干皮身体乳打底",
+          "温柔富家千金",
+          "避开真丝首饰"
+        ]
+      },
+      "fullCommunityGuides": {
+        "sprayMethods": {
+          "nosetimeInsights": [
+            "留香与扩香双强，日常只需轻喷 1 泵就足够香一整天，无需反复补喷。",
+            "试香纸仅喷一泵都可能让人甜到发晕，上身务必严控泵数，切忌多喷造成齁甜压迫。",
+            "建议远离鼻尖位置少量点喷，减轻前中调密集白花果甜对嗅觉的直接冲击。"
+          ],
+          "socialMethods": [
+            "距皮轻按单泵不揉搓法：距离手腕内侧、颈侧或耳后 10–15 厘米轻按 1 泵后自然风干，严禁双腕互搓破坏佛手柑与橙花前调，1 泵即可稳稳续航一整天。",
+            "内衣内侧与腰踝藏香法：因原版 EDP 晚香玉扩散极大、办公室喷洒易致“味道太冲”社死，可将 1 泵喷于内衣内侧、腰侧或膝盖内侧，借热气自下而上缓慢散发温柔伪体香。",
+            "高空香雾步入减浓法：距离身体前方上方 15–20 厘米向空中喷 1–2 泵后优雅走入，让葡萄橙花感均匀薄雾化在发丝和外衣表层，大幅削弱近距浓甜冲击感。",
+            "干皮无香身体乳锁香法：干性肌肤可在沐浴后先涂无香身体乳打底，再于脉搏点喷 1 泵，不仅让白花向波旁香草雪松尾调过渡更奶油丝滑，还能延长 1–2 小时贴肤留香。"
+          ]
+        },
+        "outfitPairings": {
+          "nosetimeInsights": [
+            "贴合热情洋溢的青春美少女感日常穿搭，适配略施脂粉、明媚甜美的约会风格。",
+            "户外聚会或开阔社交场合表现亮眼，甜润葡萄果香与白花辨识度高。",
+            "若在室内或日常通勤穿戴，因扩散与留香均极为持久，必须压低喷量避免影响同事。"
+          ],
+          "socialPairings": [
+            "富家千金粗花呢套装：经典小香风粗花呢短外套配柔滑真丝半裙（穿前避开直喷真丝面料），选用粉、奶杏、象牙白温柔浅色系，适配春秋及初冬重要约会与见长辈场合，烘托明媚亲和的千金感。",
+            "法式浪漫碎花约会裙：轻盈雪纺或棉质法式方领碎花连衣裙搭针织开衫，浅紫、淡粉、米白柔和色系，适合春秋季周末约会与下午茶，多肉葡萄般清甜开场搭配奶油香草尾调极具心动氛围。",
+            "控量柔化轻职场通勤装：剪裁利落的莫兰迪色系西装外套内搭莫代尔或棉混纺打底衫配高腰阔腿裤，米白、浅灰蓝系，适合春秋空调房职场办公（严格控量 1 泵），以温婉白花柔和正装锋芒。",
+            "冬日软糯毛衣温暖穿搭：厚实羊绒或马海毛圆领毛衣搭配半身呢裙，燕麦奶杏暖色系，适合秋冬季节室内聚餐，雪松与香草的温暖贴肤感在冷空气中显得安全感十足。"
+          ]
+        },
+        "practicalTips": {
+          "nosetimeTips": [
+            "认准 2020 原版 EDP（最明显气味投票第一为葡萄 33%，其次晚香玉 15%），区分后期推出的各衍生版。",
+            "无法接受晚香玉或浓甜白花的人群务必慎入，前调葡萄散去后中调晚香玉存在感极强。",
+            "部分高赞负评直指其“甜到天旋地转”及“后调像康师傅茉莉蜜茶”，强烈建议先到专柜试香再购买。",
+            "虽有晕吲哚用户反馈此支可接受，但仍应亲自测试完整前中后调过渡，确认不甜腻再下单。"
+          ],
+          "socialTips": [
+            "高频“力士幽莲”撞香与白花晕香警示：大量真实差评反馈其前中调酷似“多肉葡萄软糖”及“力士幽莲魅肤沐浴露”，且晚香玉甜度饱满；对白花甜香敏感者切勿盲入大瓶，务必先买分装或专柜试香。",
+            "控泵减量并躲开盛夏高温户外：EDP 留香与扩散极强，1 泵已足够；35℃ 以上盛夏户外汗热会放大甜腻黏重感，更建议在春秋冬及空调房使用，办公室优先选用藏香法。",
+            "避开直喷真丝面料与金属首饰：酒精与香精成分接触浅色真丝或娇贵织物易留渍，且可能腐蚀珍珠与镀金饰品光泽，建议先喷香待干后再佩戴首饰与穿娇贵外衣。",
+            "认准经典蓝金环原版防买错衍生款：该系列分支众多，原版 EDP 为蓝金配色圆盖且支持替换装设计，购前注意区分味道更沉甜的馥郁版（Intense）与青涩柑橘挂的花漾版（Floral）。"
+          ]
+        }
+      },
+      "uiCardCopy": {
+        "reputationTags": [
+          "多肉葡萄软糖",
+          "一泵香透一整天",
+          "晕晚香玉慎入"
+        ],
+        "poetic": "葡萄般清甜橙花裹着暖润晚香玉，明媚得像牵手去约会",
+        "notes": {
+          "top": "橙花 · 香柠檬",
+          "heart": "晚香玉 · 茉莉",
+          "base": "香草 · 麝香 · 雪松"
+        },
+        "wearingGuide": {
+          "spray": "内衣内侧或腰踝藏喷1泵，严禁互搓手腕",
+          "outfit": "粗花呢短外套或法式碎花裙配暖白约会",
+          "tip": "晚香玉浓甜避盛夏高温，切忌直喷真丝首饰"
+        }
+      }
+    },
+    {
+      "id": "versace-bright-crystal",
+      "index": 5,
+      "brandZh": "范思哲",
+      "brandEn": "Versace",
+      "nameZh": "粉耀晶钻（粉钻）",
+      "nameEn": "Bright Crystal",
+      "concentration": "EDT",
+      "uiScentFamily": "清新花果香调",
+      "palette": {
+        "primary": "#B85C72",
+        "soft": "#FAEEF1"
+      },
+      "nosetime": {
+        "title": "范思哲 粉耀晶钻 Versace Bright Crystal|香水评论|香调|价格|味道|香评|评价|-香水时代NoseTime.com",
+        "url": "https://www.nosetime.com/xiangshui/779416.html",
+        "hostVerified": true,
+        "ratingScore": 7.9,
+        "ratingCount": 15898,
+        "scentFamily": "果香花香调",
+        "officialNotes": {
+          "top": "日本柚子、石榴、冰",
+          "heart": "牡丹、莲花、木兰",
+          "base": "麝香、桃花心木、琥珀"
+        },
+        "longevityConsensus": "67%（4983 票；在清新花果香调中留香属中上水平）",
+        "sillageConsensus": "站内无独立扩散度进度条；刚喷出时偏浓，随后转向贴身适中扩散（近距离可闻）",
+        "topUserQuotes": {
+          "positive": [
+            "R姐走路带风（72赞）：这就是我的本命香，25岁喜欢到30岁，四季通用。",
+            "香水专柜老板809021（57赞）：上班、上学、约会、聚会都可用，万能万金油。",
+            "月勾叶残风吹雨（149赞）：前调水盈盈的石榴，中调甜石榴与牡丹带粉感，尾调温柔，职场新人学生接受度高。",
+            "长评共识：适合夏天，像穿粉红色连衣裙的少女恬静平易近人，前调略街、后调很舒服，入门香不错。"
+          ],
+          "negativeOrCaveat": [
+            "香水专柜老板809021（57赞）：避雷：刚喷有点浓，不喜甜美花果者慎入。",
+            "爱灵能爱自己（33赞）/ pinpin19910102（78赞）：有人吐槽刺鼻塑料感两元店味或甜度糖精过重，建议先试勿盲买。"
+          ],
+          "rawQuotes": [
+            "R姐走路带风（72赞）：这就是我的本命香，25岁喜欢到30岁，四季通用。",
+            "香水专柜老板809021（57赞）：上班、上学、约会、聚会都可用，万能万金油；避雷：刚喷有点浓，不喜甜美花果者慎入。",
+            "月勾叶残风吹雨（149赞）：前调水盈盈的石榴，中调甜石榴与牡丹带粉感，尾调温柔，职场新人学生接受度高。",
+            "长评共识：适合夏天，像穿粉红色连衣裙的少女恬静平易近人，前调略街、后调很舒服，入门香不错。",
+            "爱灵能爱自己（33赞）/ pinpin19910102（78赞）：有人吐槽刺鼻塑料感两元店味或甜度糖精过重，建议先试勿盲买。"
+          ]
+        }
+      },
+      "socialSources": [
+        {
+          "site": "小红书",
+          "title": "《🫧写写 春夏的明媚美女感香。（丁禹兮同款版》（2039赞）",
+          "url": "https://www.xiaohongshu.com/explore/69fd7a3a000000003701c059?xsec_token=ABqImJ-wGAnqAz1uQTlhlZnZgg87_Ma-jMOfVZ5lZ-xQs=&xsec_source=pc_search&source=web_search_result_notes",
+          "hostVerified": true
+        },
+        {
+          "site": "小红书",
+          "title": "《3、范思哲 粉耀晶钻（我的第一款）》（437赞）",
+          "url": "https://www.xiaohongshu.com/explore/6a19bb64000000000803f4e0?xsec_token=ABkkeiqusrS10EviEBXavj6YfYxbGqh50USjTkD3WbQ3s=&xsec_source=pc_search&source=web_search_result_notes",
+          "hostVerified": true
+        },
+        {
+          "site": "小红书",
+          "title": "《跟风没人敢说实话吗？范思哲粉钻真的好闻吗》（91赞）",
+          "url": "https://www.xiaohongshu.com/explore/692bcf27000000001e001e4c?xsec_token=ABNKo2iY-rEiIvVDZc3-HNSJNqMIhGUf2aTkwQ1JE3o-A=&xsec_source=pc_search&source=web_search_result_notes",
+          "hostVerified": true
+        },
+        {
+          "site": "小红书",
+          "title": "《范思哲粉钻(晶钻)女士淡香水EDT》（85赞）",
+          "url": "https://www.xiaohongshu.com/explore/6ab614c90000000014039dff?xsec_token=ABfSIHd0Ni_cn-pKJ3A9y3pvRK6zYURF8IEmmJ6FvL7lU=&xsec_source=pc_search&source=web_search_result_notes",
+          "hostVerified": true
+        },
+        {
+          "site": "小红书",
+          "title": "《范思哲晶钻香水使用指南》（24赞）",
+          "url": "https://www.xiaohongshu.com/explore/69ad1db6000000001d011cd4?xsec_token=ABcQQvsxUUF4Gw4fEcivaCOCwC-Y_1jrj3P_hkLjVfDQI=&xsec_source=pc_search&source=web_search_result_notes",
+          "hostVerified": true
+        },
+        {
+          "site": "什么值得买",
+          "title": "什么值得买社区实测文章（p/aov4zg8r）",
+          "url": "https://post.smzdm.com/p/aov4zg8r/",
+          "hostVerified": true
+        },
+        {
+          "site": "什么值得买",
+          "title": "什么值得买社区实测文章（p/a5rznzz3）",
+          "url": "https://post.smzdm.com/p/a5rznzz3/",
+          "hostVerified": true
+        }
+      ],
+      "sourceStats": {
+        "totalSocialSources": 7,
+        "xiaohongshuCount": 5,
+        "smzdmCount": 2,
+        "hostVerifiedTrueCount": 7,
+        "hostVerifiedFalseCount": 0
+      },
+      "candidateReputationTags": [
+        "冰感石榴柚子",
+        "早八校园零踩雷",
+        "勿混深粉浓香版",
+        "大衣衣角留香久",
+        "粉色连衣裙少女",
+        "高级商场入门香",
+        "前调略浓塑料感",
+        "身体乳打底延香"
+      ],
+      "rawTagPools": {
+        "nosetime": [
+          "水润石榴柚子",
+          "牡丹莲花水感",
+          "粉色连衣裙少女",
+          "四季万金油",
+          "职场学生百搭",
+          "刚喷略浓街香",
+          "塑料糖精雷点",
+          "慎盲买先试香"
+        ],
+        "social": [
+          "冰感石榴柚子",
+          "人生第一瓶大牌香",
+          "大衣衣角留香一周",
+          "氧气甜妹千金感",
+          "高级商场香味",
+          "早八校园零踩雷",
+          "淡香水需身体乳补香",
+          "勿混极致粉钻"
+        ]
+      },
+      "fullCommunityGuides": {
+        "sprayMethods": {
+          "nosetimeInsights": [
+            "刚喷出瞬间浓度偏高，建议出门前提前喷洒预留散香时间，等前调回落后再见人。",
+            "中后调呈近距离可闻的温和贴身扩散，日常通勤或上课适度喷洒即可保持舒服存在感。",
+            "若不喜欢前调略显商业街香的甜冲感，可避开紧贴口鼻部位喷洒，静待牡丹莲花中调铺开。"
+          ],
+          "socialMethods": [
+            "脉搏三点轻喷晾干法：喷在耳后、锁骨与手腕内侧各 1–2 泵并自然风干，切勿双腕互搓以免破坏日本柚子与石榴前调的冰凉水感，让其平顺过渡至牡丹木兰花香。",
+            "呢子大衣与围巾锁香法：直接喷 2–3 泵在裙摆、衣角、围巾或毛呢大衣内衬，织物可牢牢锁住桃花心木与麝香尾调，实测大衣挂衣柜一周仍有干净清香。",
+            "身体乳油脂打底补救法：由于 EDT 浓度在皮肤上仅能维持约 4–6 小时，出门前或浴后先涂一层无香身体乳（或同系列身体乳）再喷 2 泵，能显著减缓果香挥发速率。",
+            "木梳扫发梢与分装补香法：将 1 泵喷在梳齿上再轻梳发尾（避免酒精直喷伤发），转头间自带柔美花果气息；随身携带小分装每 4 小时补喷 1–2 泵续香。"
+          ]
+        },
+        "outfitPairings": {
+          "nosetimeInsights": [
+            "像穿着粉红色连衣裙的恬静少女，适合平易近人、温柔清爽的日常穿搭。",
+            "四季通用的万金油香型，涵盖上班通勤、校园上学、约会与朋友聚会等全场景。",
+            "尤为适配夏季日常与职场新人、学生党作为低门槛入门商业女香。"
+          ],
+          "socialPairings": [
+            "明媚初恋雪纺纱裙装：轻盈雪纺连衣裙、法式碎花裙搭配柔软针织开衫，樱花粉、奶白、浅杏色系，最适合春夏日间逛街、闺蜜聚会与甜蜜约会，贴合温柔乖巧的氧气甜妹气质。",
+            "早八校园减龄休闲风：纯棉基础款上衣或浅色连帽卫衣配直筒牛仔裤与帆布鞋，水蓝、浅粉、纯净白色系，适配春夏秋季校园教室与图书馆日常，清新洁净完全不扰人。",
+            "职场新人安全通勤装：垂顺雪纺衬衫搭配半身直筒裙或米色轻风衣，浅杏、米白、淡灰蓝知性色系，适合春夏季写字楼办公通勤，以亲和花果香柔化正装的疏离与严肃。",
+            "冬日浅色毛呢温柔搭：浅粉或燕麦色毛呢大衣搭配露锁骨软糯针织衫与羊绒围巾，浅暖色调为主，适合秋冬季节室内聚会，借大衣织物长效散发贴肤温润麝香尾调。"
+          ]
+        },
+        "practicalTips": {
+          "nosetimeTips": [
+            "香水时代站内词条名为“范思哲 粉耀晶钻”（常称香恋水晶/粉钻），认准 2006 原版 EDT。",
+            "虽被视为入门百搭香，但高赞负评指出存在“刺鼻塑料感两元店味”或“甜度糖精过重”的雷点，切忌盲买。",
+            "试香时勿只凭刚喷出时偏浓略街的前调下结论，需耐心等待柔和温柔的牡丹与麝香中后调。",
+            "不喜欢甜美水润花果香或偏爱清冷高辨识度沙龙香者建议先试小样。"
+          ],
+          "socialTips": [
+            "补救 EDT 短留香与认清定位：皮肤实测留香仅 4–6 小时，期待喷一次管全天或浓烈大女主气场者慎入；需靠无香身体乳打底、喷衣角围巾与随身补喷提升续航。",
+            "防甜腻塑料感与撞香雷区：虽是公认安全牌“高级商场入门香”，仍有不少用户吐槽前调过甜、鲜花发闷或带花露水与塑料糖精感（湿热天气尤甚），且撞香率偏高，建议先试分装再买正装。",
+            "严分浅粉原版与极致粉钻：认准浅粉通透玻璃瓶身的原版淡香水（Bright Crystal EDT，即粉耀晶钻/香恋水晶），勿与液体和瓶身呈深玫红、甜浓厚重的极致粉钻浓香版（Bright Crystal Absolu）或粉屿流光混淆。",
+            "控制起始喷量并警惕仿货：刚喷出瞬间浓度略明显，切忌贴颈连喷 3 下以上；该款大钻石瓶盖工艺常被廉价仿品山寨，务必认准正规专柜或大型授权自营平台购买。"
+          ]
+        }
+      },
+      "uiCardCopy": {
+        "reputationTags": [
+          "冰感石榴柚子",
+          "早八校园零踩雷",
+          "勿混深粉浓香版"
+        ],
+        "poetic": "冰镇石榴撞上柚子与浅粉牡丹，干净透亮的少女感花果香",
+        "notes": {
+          "top": "日本柚子 · 石榴 · 冰",
+          "heart": "牡丹 · 莲花 · 木兰",
+          "base": "麝香 · 桃花心木 · 琥珀"
+        },
+        "wearingGuide": {
+          "spray": "耳后锁骨喷2泵或扫发尾，喷呢大衣锁香",
+          "outfit": "樱花粉雪纺连衣裙或浅色纯棉卫衣日常穿",
+          "tip": "先涂无香身体乳延香，认准浅粉原版淡香"
+        }
+      }
+    },
+    {
+      "id": "ysl-mon-paris",
+      "index": 6,
+      "brandZh": "圣罗兰",
+      "brandEn": "YSL",
+      "nameZh": "反转巴黎 EDP",
+      "nameEn": "Mon Paris EDP",
+      "concentration": "EDP",
+      "uiScentFamily": "西普果香花香调",
+      "palette": {
+        "primary": "#8F3B52",
+        "soft": "#F6E9ED"
+      },
+      "nosetime": {
+        "title": "圣罗兰 反转巴黎淡香精 YSL Yves Saint Laurent Mon Paris|香水评论|香调|价格|味道|香评|评价|-香水时代NoseTime.com",
+        "url": "https://www.nosetime.com/xiangshui/717547.html",
+        "hostVerified": true,
+        "ratingScore": 5.2,
+        "ratingCount": 20640,
+        "scentFamily": "果香西普调",
+        "officialNotes": {
+          "top": "草莓、树莓、梨、橙子、蜜橘、香柠檬、西瓜酮",
+          "heart": "牡丹、茉莉、曼陀罗、橙花",
+          "base": "广藿香、麝香、香草、降龙涎香醚、橡木苔、雪松"
+        },
+        "longevityConsensus": "78%（6748 票）；留香极长，社区反馈早8点到晚9点仍余韵明显，洗三次手尚有残留",
+        "sillageConsensus": "站内无独立扩散度进度条；高赞共识为“扩散度极强/夺味流氓”，20步外可见香迹，密闭空间易致闷熏",
+        "topUserQuotes": {
+          "positive": [
+            "Agnes .（89赞）/ 范冰冰（40赞）：甜香有甜香的美；斩男香很让男孩子上头。",
+            "帆帆帆🌟（181赞）/ 一轮明月（129赞）：约会时喷耳后、手腕与后腰；适配花裙少女。"
+          ],
+          "negativeOrCaveat": [
+            "圆圆鼠（140赞）/ L猫又（68赞）：草莓酱甜到发腻，早晚高峰地铁有人用可能想跳车；夺味流氓一喷周围别的香全闻不到。",
+            "暴躁老哥约瑟夫卡（637赞）：齁甜草莓糖加日化牡丹与塑料降龙涎香醚，穿去办公室男同事冬日开窗开风扇哀嚎。",
+            "流逝银光（50赞）/ 一轮明月（129赞）：喷三下堪比生化武器；店内试香难品清需回家细试。"
+          ],
+          "rawQuotes": [
+            "圆圆鼠（140赞）/ L猫又（68赞）：草莓酱甜到发腻，早晚高峰地铁有人用可能想跳车；夺味流氓一喷周围别的香全闻不到。",
+            "Agnes .（89赞）/ 范冰冰（40赞）：甜香有甜香的美；斩男香很让男孩子上头。",
+            "暴躁老哥约瑟夫卡（637赞）：齁甜草莓糖加日化牡丹与塑料降龙涎香醚，穿去办公室男同事冬日开窗开风扇哀嚎。",
+            "流逝银光（50赞）/ 帆帆帆🌟（181赞）/ 一轮明月（129赞）：喷三下堪比生化武器；约会时喷耳后、手腕与后腰；适配花裙少女，店内试香难品清需回家细试。"
+          ]
+        }
+      },
+      "socialSources": [
+        {
+          "site": "xiaohongshu.com",
+          "title": "《想给反转巴黎设计师一刀》（2492赞）",
+          "url": "https://www.xiaohongshu.com/explore/66a51ba1000000002701dbaf?xsec_token=ABbWKdLK9k4wgx6pXksN3kt1ztDiYK0v7z-6VjfCDXPEQ=&xsec_source=pc_search&source=web_search_result_notes",
+          "hostVerified": true
+        },
+        {
+          "site": "xiaohongshu.com",
+          "title": "《市面上七大“斩男香”大白话版香评》（1580赞）",
+          "url": "https://www.xiaohongshu.com/explore/6899a8fa00000000250111b0?xsec_token=ABimcDkzqbryQOLy3zREMLZiyyA_41tA-Bdy359_mMIs4=&xsec_source=pc_search",
+          "hostVerified": true
+        },
+        {
+          "site": "xiaohongshu.com",
+          "title": "《ysl反转巴黎这三款有什么区别吗》（863赞）",
+          "url": "https://www.xiaohongshu.com/explore/68f1241a0000000007031514?xsec_token=ABBY_wtRTrW4WuNzSH5D2XqoQ_sT48fIgMGIvry_UndR0=&xsec_source=pc_search",
+          "hostVerified": true
+        },
+        {
+          "site": "xiaohongshu.com",
+          "title": "《反转巴黎系列哪个好闻？》（484赞）",
+          "url": "https://www.xiaohongshu.com/explore/6755a4d80000000002025341?xsec_token=ABZh3abVG7QjcnJlTpCbdMb0RYUCCF4mUagjGSpDaojmA=&xsec_source=pc_search",
+          "hostVerified": true
+        },
+        {
+          "site": "xiaohongshu.com",
+          "title": "《YSL反转巴黎》（390赞）",
+          "url": "https://www.xiaohongshu.com/explore/66b0c39a0000000005032d11?xsec_token=AB7uEFwqmBWZsuKE70PL7fAZIvfmzv_dICboSL53zhemk=&xsec_source=pc_search&source=web_search_result_notes",
+          "hostVerified": true
+        },
+        {
+          "site": "xiaohongshu.com",
+          "title": "《说一个公交车上味道呛鼻子的香水》（196赞）",
+          "url": "https://www.xiaohongshu.com/explore/6a0a50820000000007028fa7?xsec_token=AB218XS3_DpVyZLaUHOUkqMJZPQGIHzf70WF3U8TTZEbU=&xsec_source=pc_search&source=web_search_result_notes",
+          "hostVerified": true
+        },
+        {
+          "site": "post.smzdm.com",
+          "title": "什么值得买实读长评：圣罗兰反转巴黎相关评测（am9m5rod）",
+          "url": "https://post.smzdm.com/p/am9m5rod/",
+          "hostVerified": true
+        },
+        {
+          "site": "post.smzdm.com",
+          "title": "什么值得买实读长评：圣罗兰反转巴黎相关评测（a60m7geo）",
+          "url": "https://post.smzdm.com/p/a60m7geo/",
+          "hostVerified": true
+        },
+        {
+          "site": "post.smzdm.com",
+          "title": "什么值得买实读长评：圣罗兰反转巴黎相关评测（ammkdn0v）",
+          "url": "https://post.smzdm.com/p/ammkdn0v/",
+          "hostVerified": true
+        }
+      ],
+      "sourceStats": {
+        "totalSocialSources": 9,
+        "xiaohongshuCount": 6,
+        "smzdmCount": 3,
+        "hostVerifiedTrueCount": 9,
+        "hostVerifiedFalseCount": 0
+      },
+      "candidateReputationTags": [
+        "草莓糖浆失魂果",
+        "脚踝低位防呛鼻",
+        "通勤地铁慎多喷",
+        "高甜夺味扩散猛",
+        "梳子喷香扫发尾",
+        "口碑两极先试香",
+        "小黑裙约会夜风",
+        "认准黑丝带原版"
+      ],
+      "rawTagPools": {
+        "nosetime": [
+          "失魂果",
+          "草莓糖浆",
+          "甜腻通勤警告",
+          "留香炸裂",
+          "扩散夺味",
+          "斩男争议香",
+          "花裙少女",
+          "先试后买"
+        ],
+        "social": [
+          "失魂果",
+          "草莓水果糖",
+          "行走荷尔蒙",
+          "斩男争议香",
+          "通勤呛鼻预警",
+          "脚踝低位喷法",
+          "蝴蝶结多版本",
+          "喷梳子梳发尾"
+        ]
+      },
+      "fullCommunityGuides": {
+        "sprayMethods": {
+          "nosetimeInsights": [
+            "严格控制泵数，高赞香评直言“喷三下堪比生化武器”，日常应以极少量点喷为主。",
+            "约会使用建议轻喷于耳后、手腕与后腰等部位，借体温暖意自然散出甜美氛围。",
+            "留香极长（可从早8点持续至晚9点，洗三次手仍有余韵），清晨单次少量即可满足全天，切勿频繁补喷。"
+          ],
+          "socialMethods": [
+            "约会手腕与颈后延香法：先在手腕内侧和颈后薄涂凡士林或无香润肤乳打底，再各轻按 1 泵，切勿揉搓手腕，避免破坏前调莓果分子发酸冲鼻。",
+            "逛街发尾梳香防闷法：距梳齿 15–20 厘米喷 1–2 泵后轻梳发尾，或向空中喷雾后穿行，走动转头时散出柔和花果香，避免直喷耳鼻带来甜腻压迫。",
+            "聚餐手臂内侧避味法：外出聚餐时改喷在手臂内侧 1 泵，让甜香与口鼻保持距离，防止前调草莓甜香盖过食物香气或干扰食欲。",
+            "见长辈/通勤脚踝低位法：上班通勤或拜见长辈时仅点喷于脚踝或膝盖内侧各 1 泵，借体温由下而上缓释气味，克制体面不熏人。"
+          ]
+        },
+        "outfitPairings": {
+          "nosetimeInsights": [
+            "香评共识最适配穿花裙的少女穿搭风格与浪漫约会场景。",
+            "极不建议早晚高峰地铁或密闭办公室通勤穿戴，高扩散甜腻易使同乘或男同事开窗避味。",
+            "适合室外通风空间或偏爱高甜度“斩男香”氛围的约会出行。"
+          ],
+          "socialPairings": [
+            "纯欲甜妹碎花连衣裙：雪纺或棉质法式碎花连衣裙外搭薄针织开衫，白、浅粉或浅米色系，适配春夏白日逛街、闺蜜聚会与初次约会。",
+            "简约浅色白日通勤装：垂感白色或浅米衬衫配浅色直筒裤，低位控量 1 泵弱化甜感，适配春夏季节日常通勤与看展。",
+            "秋冬廓形大衣千金风：修身黑色或奶白打底衫外披廓形呢子大衣配短靴，借中后调广藿香与木质调中和莓果甜意，适配秋冬季节约会与聚会。",
+            "夜场小黑裙暗夜风：剪裁利落的黑色连衣裙或缎面吊带裙，呼应中调曼陀罗与尾调广藿麝香的微醺神秘感，适配夜间观影与派对。"
+          ]
+        },
+        "practicalTips": {
+          "nosetimeTips": [
+            "专柜或店内混杂气味环境下难以品清三调层次，建议带试香回家单独细试后再购入。",
+            "站内评分 5.2 分（20640 票中 2–3 星占 48%），口碑两极分化明显，务必先试后买切忌盲入。",
+            "社区最明显气味投票中草莓（28%）、树莓（16%）占主导且含西瓜酮与降龙涎香醚，晕甜腻或塑料水生感者慎选。"
+          ],
+          "socialTips": [
+            "通勤密闭空间极易呛鼻：EDP 浓度高且扩散极强，早晚高峰公交、地铁或电梯易成“社交刺客”，建议提前 20–30 分钟喷洒或改用脚踝低位法。",
+            "严防买混蝴蝶结多胞胎：反转巴黎系列外观相近、版本众多，入手时务必认准经典原版 EDP（黑丝带蝴蝶结、浅粉紫透瓶），勿混入波点 EDT、花溢、花耀或光耀版。",
+            "先试小样再入正装防晕香：前调草莓树莓糖浆甜度高、皮肤留香超 6–8 小时，晕甜香或晕白花体质切忌盲入大瓶，先试小样体验后调广藿收尾。",
+            "避光存放防氧化与辨渠道：高温光照易导致香水氧化发黄且气味变闷，应避光阴凉存放；热款仿品多，购买优先品牌专柜或官方授权渠道。"
+          ]
+        }
+      },
+      "uiCardCopy": {
+        "reputationTags": [
+          "草莓糖浆失魂果",
+          "脚踝低位防呛鼻",
+          "通勤地铁慎多喷"
+        ],
+        "poetic": "浓甜莓果跌进微凉广藿夜风，让人上头又自带热恋争议",
+        "notes": {
+          "top": "草莓 · 树莓 · 梨 · 西瓜酮",
+          "heart": "牡丹 · 茉莉 · 曼陀罗 · 橙花",
+          "base": "广藿香 · 麝香 · 香草 · 降龙涎香醚"
+        },
+        "wearingGuide": {
+          "spray": "通勤仅脚踝轻点1泵，逛街喷梳齿轻梳发尾",
+          "outfit": "小黑裙或碎花裙配呢大衣约会夜间聚会穿",
+          "tip": "前调糖度极高勿盲入，认准黑丝带原版浓香"
+        }
+      }
+    },
+    {
+      "id": "chanel-no5",
+      "index": 7,
+      "brandZh": "香奈儿",
+      "brandEn": "Chanel",
+      "nameZh": "5号 EDP",
+      "nameEn": "N°5 EDP",
+      "concentration": "EDP",
+      "uiScentFamily": "经典乙醛花香调",
+      "palette": {
+        "primary": "#A37E38",
+        "soft": "#F7F2E6"
+      },
+      "nosetime": {
+        "title": "香奈儿 5号淡香精 Chanel N°5 Eau de Parfum|香水评论|香调|价格|味道|香评|评价|-香水时代NoseTime.com",
+        "url": "https://www.nosetime.com/xiangshui/291295.html",
+        "hostVerified": true,
+        "ratingScore": 8.4,
+        "ratingCount": 5514,
+        "scentFamily": "醛香花香调",
+        "officialNotes": {
+          "top": "醛、依兰、橙花油、香柠檬、桃子",
+          "heart": "鸢尾花、茉莉、玫瑰、铃兰",
+          "base": "檀香木、香草、橡木苔、香根草、广藿香"
+        },
+        "longevityConsensus": "76%（2062 票）；留香非常持久，稳定维持 5–6 小时以上",
+        "sillageConsensus": "站内无独立扩散度进度条；前调醛香冲鼻扩散明显（可满屋皆香），中后调归于温和贴肤",
+        "topUserQuotes": {
+          "positive": [
+            "辰雨之境（171赞）：EDT醛最重，EDP花香核心最重，Parfum麝香木质最重；EDP因茉莉玫瑰丰满最易穿戴。",
+            "广藿（21赞）/ 橘皮學長（94赞）/ 扶风_（27赞）：如上好羊绒披肩与沐浴后洁净感，绝佳侍寝香；男生穿也显干净；初喷呛鼻磨合两月后在潮湿雨天与北方冬风中温柔裹身。"
+          ],
+          "negativeOrCaveat": [
+            "铜雀深梦（68赞）/ T.Y（62赞）/ H.（43赞）/ 夢嫄（25赞）：两极严重：爱者奉为经典，嫌者吐槽像花露水、药皂味、电蚊香片；先试香勿直冲。"
+          ],
+          "rawQuotes": [
+            "辰雨之境（171赞）：EDT醛最重，EDP花香核心最重，Parfum麝香木质最重；EDP因茉莉玫瑰丰满最易穿戴。",
+            "广藿（21赞）/ 橘皮學長（94赞）/ 扶风_（27赞）：如上好羊绒披肩与沐浴后洁净感，绝佳侍寝香；男生穿也显干净；初喷呛鼻磨合两月后在潮湿雨天与北方冬风中温柔裹身。",
+            "铜雀深梦（68赞）/ T.Y（62赞）/ H.（43赞）/ 夢嫄（25赞）：两极严重：爱者奉为经典，嫌者吐槽像花露水、药皂味、电蚊香片；先试香勿直冲。"
+          ]
+        }
+      },
+      "socialSources": [
+        {
+          "site": "xiaohongshu.com",
+          "title": "《喷香水留香大法（改进版）》（1422赞）",
+          "url": "https://www.xiaohongshu.com/explore/697cbd3c000000000a0315ae?xsec_token=ABn1bmU1E9KuVN5lPK7_LazPvFsoEiH_9u5weu8mbclDU=&xsec_source=pc_search",
+          "hostVerified": true
+        },
+        {
+          "site": "xiaohongshu.com",
+          "title": "《千元香奈儿 5 号，为何闻着像两块钱香皂？》（175赞）",
+          "url": "https://www.xiaohongshu.com/explore/6ac9941d0000000012038ac1?xsec_token=ABzlTfHvFWvcKCCssOYZGT8Ogw9ZKivEMece03XQnm4O4=&xsec_source=pc_search",
+          "hostVerified": true
+        },
+        {
+          "site": "xiaohongshu.com",
+          "title": "《香奈儿五号经典浓香》（165赞）",
+          "url": "https://www.xiaohongshu.com/explore/6966ec1f000000000a02bc52?xsec_token=ABv8DztkIwe8Gi9fmRQyD726hVbOzgodzYKZONehTdrDs=&xsec_source=pc_search",
+          "hostVerified": true
+        },
+        {
+          "site": "xiaohongshu.com",
+          "title": "《五号香水到底是什么样的味道？》（158赞）",
+          "url": "https://www.xiaohongshu.com/explore/6a9257b60000000020037b80?xsec_token=ABR6bG_HdXO2dXUadZVDYcEYQojUFAWGGyf-VGQWsVfVQ=&xsec_source=pc_search",
+          "hostVerified": true
+        },
+        {
+          "site": "xiaohongshu.com",
+          "title": "《N°5 又出新版？EDT 真的比 EDP 好吗？》（116赞）",
+          "url": "https://www.xiaohongshu.com/explore/69a7bc93000000000d0092a2?xsec_token=ABEVuPn4kSKHwGI7vxedqkMhq59niU9NH8itN9jpjhjIc=&xsec_source=pc_search",
+          "hostVerified": true
+        },
+        {
+          "site": "xiaohongshu.com",
+          "title": "《香奈儿5号: 钟爱的气味不应被性别所定义》（78赞）",
+          "url": "https://www.xiaohongshu.com/explore/69aa9cb30000000015033450?xsec_token=ABjuIrXVx_Fco4S7uIwTPz4nHh0YNMCwVpb8tymsU10SI=&xsec_source=pc_search",
+          "hostVerified": true
+        },
+        {
+          "site": "post.smzdm.com",
+          "title": "《2026香奈儿5号怎么选？三款主力香型实测对比，避坑指南来了》",
+          "url": "https://post.smzdm.com/p/al3ggw7g/",
+          "hostVerified": true
+        },
+        {
+          "site": "post.smzdm.com",
+          "title": "《2026新版香奈儿5号EDT留香仅3小时？真相是设计取舍，不是质量问题》",
+          "url": "https://post.smzdm.com/p/a70xxzrl/",
+          "hostVerified": true
+        },
+        {
+          "site": "post.smzdm.com",
+          "title": "《香奈儿5号香水（节日限定礼盒开箱及系列对比测评）》",
+          "url": "https://post.smzdm.com/p/a8x4dxll/",
+          "hostVerified": true
+        }
+      ],
+      "sourceStats": {
+        "totalSocialSources": 9,
+        "xiaohongshuCount": 6,
+        "smzdmCount": 3,
+        "hostVerifiedTrueCount": 9,
+        "hostVerifiedFalseCount": 0
+      },
+      "candidateReputationTags": [
+        "皂感脂粉慢热",
+        "羊绒披肩侍寝香",
+        "花露水皂感争议",
+        "外套内衬轻喷",
+        "吹风散前调妙招",
+        "雨天冬风最贴肤",
+        "大女主复古贵气",
+        "认准经典浓香版"
+      ],
+      "rawTagPools": {
+        "nosetime": [
+          "醛香皂感",
+          "花露水争议",
+          "花香核心最丰满",
+          "羊绒披肩贵气",
+          "沐浴侍寝香",
+          "雨天秋冬氛围",
+          "千人千鼻",
+          "切忌盲冲"
+        ],
+        "social": [
+          "醛香皂感",
+          "羊绒披肩侍寝",
+          "痱子粉争议",
+          "大女主复古贵气",
+          "外套内衬轻喷",
+          "高温出汗翻车",
+          "吹风散前调法",
+          "认准经典浓香"
+        ]
+      },
+      "fullCommunityGuides": {
+        "sprayMethods": {
+          "nosetimeInsights": [
+            "前调醛香扩散极强且微冲（可满屋皆香），喷洒后切忌立即贴近鼻尖猛吸，需留出过渡时间。",
+            "社区高赞推荐作为沐浴后的“侍寝香”轻用，静待中后调归于温和贴肤。",
+            "EDP 留香在 5–6 小时以上，日常轻喷少量即可，中后调会稳定贴合肌肤散发温柔脂粉花香。"
+          ],
+          "socialMethods": [
+            "外套内衬与内衣边控量法：全天仅喷 1–2 泵于羊毛大衣内衬、羊绒披肩角或内衣边缘，严禁大量直喷肩颈发丝，利用织物缓慢释放温润花香与檀木尾调。",
+            "干皮打底与香雾穿行法：干性肌肤先涂无香身体乳锁香后再轻点脉搏处，或向半空按压 1–2 泵香雾从容走入，避开直接近鼻吸嗅。",
+            "吹风机低温散前调妙招：若不喜前调强烈醛香皂感，社群实测可在喷洒后用吹风机低温轻吹数秒，快速散去前调直抵贴肤柔和的玫瑰香草后调。",
+            "脉搏轻触取舍实操：高赞千赞留香帖曾实操对比“轻拭/搓手腕跳过前调醛感”的取舍，多数场合仍建议喷手肘内侧或膝后自然晾干，保留完整花香丰盈度。"
+          ]
+        },
+        "outfitPairings": {
+          "nosetimeInsights": [
+            "高赞香评喻为“上好羊绒披肩”，极配秋冬羊绒织物与精致贵气穿搭。",
+            "潮湿雨天与北方冬风等冷凉环境尤为适配，能柔化前调锐度并凸显温柔裹身感。",
+            "除女性正式与居家侍寝场景外，也有男香友反馈穿着显沐浴后洁净感。"
+          ],
+          "socialPairings": [
+            "老钱风粗花呢优雅套裙：小香风粗花呢外套配黑色小礼裙与珍珠耳饰，黑白灰或象牙白配色，致敬经典法式贵气，适配秋冬季节下午茶与音乐会。",
+            "大女主高阶职场西装：剪裁利落的黑白灰或深驼色羊毛西装套装内搭真丝衬衫与尖头高跟鞋，凸显冷静气场，适配正式商务谈判与重要会议。",
+            "羊绒大衣冬日氛围装：焦糖色、驼色长款羊毛大衣围裹羊绒披肩，在北风或湿冷雨天裹住体温，凸显温润贵气的脂粉木质质感，适配秋冬通勤与晚宴。",
+            "丝缎垂坠晚宴与侍寝风：缎面吊带长裙配黑色针织长衫（晚宴/私密约会），或柔软纯棉/真丝睡衣（冬夜侍寝），让尾调香草檀香紧贴肌肤。"
+          ]
+        },
+        "practicalTips": {
+          "nosetimeTips": [
+            "严格区分 5 号家族浓度：EDT 醛感最重、Parfum 麝香木质最重，1986 版 EDP 因茉莉玫瑰丰满被公认最易穿戴（勿混入五号之水 L'Eau 或 EDT）。",
+            "气味投票中醛占比高达 36%，部分新手会闻出花露水、药皂味或电蚊香片感，先试香勿直接冲动入手。",
+            "属于典型的慢热磨合型经典，香友反馈需给足适应期并等待中后调花香与檀木香草浮现。"
+          ],
+          "socialTips": [
+            "认准经典 EDP 勿混衍生版：5号家族包含经典 EDP（甜润丰满脂粉花香）、五号之水 L'Eau（清透柑橘年轻挂）、2026 新版 EDT 及低调奢华版，风格差距大，购买前须核对浓香水 EDP 标识。",
+            "高温 30°C 出汗环境慎穿：夏季闷热或大量出汗时，前调醛香极易与汗味混成尖锐金属肥皂感；秋冬季节或冷气充足的室内才是它的最佳舞台。",
+            "忌初闻即弃且忌盲入大瓶：前调被部分人吐槽像两块钱老式香皂、花露水或痱子粉，需耐心等 30–60 分钟待玫瑰茉莉与檀香香草浮现后再判断是否契合自身皮温。",
+            "与休闲卫衣运动装易违和：香气成熟庄重，搭配过度休闲的运动装易显“香衣分离”，若日常穿衣偏青春休闲建议先试小样或改看更清透版本。"
+          ]
+        }
+      },
+      "uiCardCopy": {
+        "reputationTags": [
+          "皂感脂粉慢热",
+          "羊绒披肩侍寝香",
+          "花露水皂感争议"
+        ],
+        "poetic": "冷冽醛感退场后，像羊绒披肩裹住温柔玫瑰与檀木余温",
+        "notes": {
+          "top": "醛 · 依兰 · 橙花油 · 香柠檬",
+          "heart": "鸢尾花 · 茉莉 · 玫瑰 · 铃兰",
+          "base": "檀香木 · 香草 · 橡木苔 · 香根草"
+        },
+        "wearingGuide": {
+          "spray": "大衣内衬或羊绒披肩轻喷1泵，避开近鼻吸",
+          "outfit": "粗花呢套裙或驼色大衣配真丝衫秋冬穿",
+          "tip": "前调皂感需等半小时，避开盛夏出汗与卫衣"
+        }
+      }
+    },
+    {
+      "id": "guerlain-mandarine-basilic",
+      "index": 8,
+      "brandZh": "娇兰",
+      "brandEn": "Guerlain",
+      "nameZh": "柑橘罗勒（花草水语）",
+      "nameEn": "Aqua Allegoria Mandarine Basilic",
+      "concentration": "EDT",
+      "uiScentFamily": "柑橘馥奇调",
+      "palette": {
+        "primary": "#557A46",
+        "soft": "#ECF2E8"
+      },
+      "nosetime": {
+        "title": "娇兰 花草水语-柑橘罗勒淡香水 Guerlain Aqua Allegoria Mandarine Basilic|香水评论|香调|价格|味道|香评|评价|-香水时代NoseTime.com",
+        "url": "https://www.nosetime.com/xiangshui/453731.html",
+        "hostVerified": true,
+        "ratingScore": 8.6,
+        "ratingCount": 16884,
+        "scentFamily": "芳香柑橘调",
+        "officialNotes": {
+          "top": "克里曼丁红橘、苦橙、橙花、茶叶、常春藤",
+          "heart": "橘子、罗勒、洋甘菊、牡丹",
+          "base": "檀香木、琥珀"
+        },
+        "longevityConsensus": "57%（4849 票）；约 5 小时上下，在柑橘调中不算短但仍偏轻盈",
+        "sillageConsensus": "站内无独立扩散度进度条；前调鲜活轻盈扩散自然，中后调贴肤温和",
+        "topUserQuotes": {
+          "positive": [
+            "hiVenus（65赞）/ Ruthénium（25赞）：新鲜克里曼丁红橘汁水四溅，削弱甜度加入罗勒常春藤营造生机绿意；大红橘酸甜夏天喷超开心。",
+            "baobeilemon（29赞）/ 菜喵_不软大（36赞）：手腕试香感觉清凉适合初夏20岁出头女孩，日常寝室喷着很治愈。"
+          ],
+          "negativeOrCaveat": [
+            "蛤蛤莓（163赞）/ 方小乐（59赞）：像舒肤佳柠檬味；与4711血橙罗勒高度相似。",
+            "红小豆（69赞）/ 邹吧啤（80赞）/ Dango（43赞）：前调惊艳但中调罗勒加洋甘菊可能有人闻出香菜味、口水味甚至狐臭雷点，切忌盲入大瓶。"
+          ],
+          "rawQuotes": [
+            "hiVenus（65赞）/ Ruthénium（25赞）：新鲜克里曼丁红橘汁水四溅，削弱甜度加入罗勒常春藤营造生机绿意；大红橘酸甜夏天喷超开心。",
+            "baobeilemon（29赞）/ 菜喵_不软大（36赞）：手腕试香感觉清凉适合初夏20岁出头女孩，日常寝室喷着很治愈。",
+            "蛤蛤莓（163赞）/ 方小乐（59赞）：像舒肤佳柠檬味；与4711血橙罗勒高度相似。",
+            "红小豆（69赞）/ 邹吧啤（80赞）/ Dango（43赞）：前调惊艳但中调罗勒加洋甘菊可能有人闻出香菜味、口水味甚至狐臭雷点，切忌盲入大瓶。"
+          ]
+        }
+      },
+      "socialSources": [
+        {
+          "site": "xiaohongshu.com",
+          "title": "《11支网红柑橘香🍊谁留香长？谁闻着想出轨？》（1997赞）",
+          "url": "https://www.xiaohongshu.com/explore/6a4b81130000000011017c22?xsec_token=AB0hnClnY0dfwYqdFlxGo8tWw9dJFQHI6MCNI6HPlADe8=&xsec_source=pc_search",
+          "hostVerified": true
+        },
+        {
+          "site": "xiaohongshu.com",
+          "title": "《挂满甜蜜的香气-视觉系香评 柑橘罗勒》（346赞）",
+          "url": "https://www.xiaohongshu.com/explore/691f110e000000001e039bb6?xsec_token=AB1_EzsWfEeAdFU_R94mNdHXbRulX7KoEtI_-FrExGvRE=&xsec_source=pc_search",
+          "hostVerified": true
+        },
+        {
+          "site": "xiaohongshu.com",
+          "title": "《心目中无法超越的2瓶美女感淡人香（长期主义》（287赞）",
+          "url": "https://www.xiaohongshu.com/explore/6a9ff0e40000000011030462?xsec_token=ABQedW3LZOm5eikHBorScC7C43K1I8i_wUW8nU2WqjDq4=&xsec_source=pc_search",
+          "hostVerified": true
+        },
+        {
+          "site": "xiaohongshu.com",
+          "title": "《求问娇兰柑橘罗勒》（158赞）",
+          "url": "https://www.xiaohongshu.com/explore/6a0d68fa0000000036018fa8?xsec_token=ABYTsAlCsTs-qtgOk4a85YaBE5Ps-sDR_4Rl1pcAiGMuY=&xsec_source=pc_search",
+          "hostVerified": true
+        },
+        {
+          "site": "post.smzdm.com",
+          "title": "《明媚活泼的清新气息——娇兰（Guerlain）花草水语柑橘罗勒淡香水》",
+          "url": "https://post.smzdm.com/p/a6p68v8g/",
+          "hostVerified": true
+        },
+        {
+          "site": "post.smzdm.com",
+          "title": "什么值得买实读评测：娇兰柑橘罗勒相关分享（ax6v0524）",
+          "url": "https://post.smzdm.com/p/ax6v0524/",
+          "hostVerified": true
+        }
+      ],
+      "sourceStats": {
+        "totalSocialSources": 6,
+        "xiaohongshuCount": 4,
+        "smzdmCount": 2,
+        "hostVerifiedTrueCount": 6,
+        "hostVerifiedFalseCount": 0
+      },
+      "candidateReputationTags": [
+        "现剥多汁大红橘",
+        "罗勒茶感零压迫",
+        "先试中调防香菜",
+        "淡人美女通勤香",
+        "喷衣领锁鲜续香",
+        "春夏零压迫清爽",
+        "舒肤佳柠檬感",
+        "勿混浓香蜜橘版"
+      ],
+      "rawTagPools": {
+        "nosetime": [
+          "多汁红橘",
+          "罗勒绿意",
+          "初夏清凉",
+          "水灵清爽",
+          "柠檬皂感",
+          "狐臭香菜雷点",
+          "手腕先试中调",
+          "橘子硬糖"
+        ],
+        "social": [
+          "刚剥开大橘子",
+          "淡人美女本命",
+          "橘子气泡水",
+          "罗勒草本微苦",
+          "可喷衣领补香",
+          "勿混浓香蜜橘",
+          "春夏通勤野餐",
+          "零压迫清爽挂"
+        ]
+      },
+      "fullCommunityGuides": {
+        "sprayMethods": {
+          "nosetimeInsights": [
+            "试香时建议喷于手腕并耐心等待中调展开，重点确认罗勒与洋甘菊在自身皮肤上的呈现。",
+            "前调鲜活轻盈、扩散自然无攻击性，中后调贴肤温和，适合在寝室或日常近距离环境放心喷用。",
+            "站内留香反馈约 5 小时上下，在清新柑橘调中不算短但整体偏轻盈，需要持久存在感时可酌情补喷。"
+          ],
+          "socialMethods": [
+            "高容错 3–4 泵清凉喷法：原版 EDT 质感轻盈不易呛人，可放心喷洒 3–4 泵于颈侧、锁骨与手腕内侧，轻拍待自然挥发勿揉搓，留住鲜活红橘汁水感。",
+            "浅色棉麻衣领袖口锁香法：距纯棉 T 恤后领、棉麻衬衫领口或袖口约 20 厘米喷 1–2 泵，用天然织物锁住易散的柑橘与罗勒绿意，注意避开浅色真丝防染色。",
+            "发梳带风轻拂法：将 1–2 泵喷于发梳后轻梳发梢，行走或微风拂过时散发清爽而不甜腻的罗勒茶香。",
+            "随身小瓶 3–4 小时补喷：柑橘前调挥发较快，日常随身备便携分装瓶，每隔 3–4 小时向衣襟补喷 1–2 泵即可随时找回刚剥开橘子的元气感。"
+          ]
+        },
+        "outfitPairings": {
+          "nosetimeInsights": [
+            "被香友评价为最适合初夏及夏季天气的清新果香，自带酸甜水灵的愉悦感。",
+            "适配 20 岁出头年轻女孩的轻盈清爽日常穿搭，风格不厚重、零压迫感。",
+            "除户外夏日出行外，也适合日常校园寝室等轻松治愈系居家场景。"
+          ],
+          "socialPairings": [
+            "夏日白 T 牛仔清爽装：基础款纯白棉质 T 恤搭配浅蓝牛仔短裤或直筒牛仔裤，亮白与牛仔蓝配色，适配春夏校园课堂、城市漫步与户外野餐。",
+            "淡人白领棉麻通勤风：透气浅绿、柠檬黄或纯白棉麻衬衫配阔腿长裤与淡妆，零压迫感消解职场沉闷，适配春夏及初秋日常通勤。",
+            "法式慵懒度假连衣裙：轻薄棉麻连衣裙、碎花裙与编织包，呼应罗勒绿意与红橘果园气息，适配周末公园野餐、郊游与度假出行。",
+            "薄针织开衫空调房穿搭：素色内搭叠穿浅绿或米白薄针织开衫，在冷气充足的室内或初秋微凉季节带来清凉治愈感，适配闺蜜下午茶。"
+          ]
+        },
+        "practicalTips": {
+          "nosetimeTips": [
+            "前调红橘（34%）极具欺骗性，但中调罗勒（20%）加洋甘菊对部分人群会产生香菜味、口水味甚至狐臭联想，务必试过中调再决定，切忌盲买。",
+            "高赞香评将其与 4711 血橙罗勒类比且有人闻出舒肤佳柠檬感，建议提前对比试香避免预期落差。",
+            "认准 2007 年花草水语经典 EDT 版本，避免与后期推出的浓香 Forte 等版本混淆。"
+          ],
+          "socialTips": [
+            "严分经典 EDT 与浓香 Forte EDP：经典原版 EDT 主打酸甜多汁橘皮与微苦罗勒草本茶感，而 Forte 浓香版偏向爆汁蜜橘软糖与奶香粉感，买前务必认准原版 EDT。",
+            "管理留香预期且忌高温暴晒：天然柑橘芳香调在皮肤上普遍维持 2–4 小时，属结构特性而非品质问题；切忌放在暴晒窗台或车内，以免柑橘精油氧化变酸。",
+            "手腕先试中调排查气味雷点：极少数用户在罗勒与洋甘菊过渡阶段会闻出香菜感、口水感或橘子汽水化工感，建议先试用小样完整体验中调后再入正装。",
+            "避开厚重皮草与暗黑御姐风：整体气质清透干净、少年感与淡人感十足，若搭配厚重皮草或浓烈夜场穿搭易产生明显的风格违和。"
+          ]
+        }
+      },
+      "uiCardCopy": {
+        "reputationTags": [
+          "现剥多汁大红橘",
+          "罗勒茶感零压迫",
+          "先试中调防香菜"
+        ],
+        "poetic": "刚剥开大红橘溅出清脆汁水，揉进微苦罗勒叶的初夏光感",
+        "notes": {
+          "top": "克里曼丁红橘 · 苦橙 · 茶叶",
+          "heart": "橘子 · 罗勒 · 洋甘菊 · 牡丹",
+          "base": "檀香木 · 琥珀"
+        },
+        "wearingGuide": {
+          "spray": "可放心喷3至4泵，棉麻衬衫领口补香更稳",
+          "outfit": "纯白短袖配牛仔或浅绿棉麻衫春夏郊游穿",
+          "tip": "先试中调排查香菜感，认准经典淡香忌暴晒"
+        }
+      }
+    },
+    {
+      "id": "dior-jadore",
+      "index": 9,
+      "brandZh": "迪奥",
+      "brandEn": "Dior",
+      "nameZh": "真我 EDP",
+      "nameEn": "J'adore EDP",
+      "concentration": "EDP",
+      "uiScentFamily": "优雅花果香调",
+      "palette": {
+        "primary": "#B27E32",
+        "soft": "#F8F1E4"
+      },
+      "nosetime": {
+        "title": "迪奥 真我 Dior J'adore|香水评论|香调|价格|味道|香评|评价|-香水时代NoseTime.com",
+        "url": "https://www.nosetime.com/xiangshui/249612.html",
+        "hostVerified": true,
+        "ratingScore": 8.7,
+        "ratingCount": 27555,
+        "scentFamily": "果香花香调",
+        "officialNotes": {
+          "top": "梨、香瓜、木兰、桃子、橘子、香柠檬",
+          "heart": "茉莉、铃兰、晚香玉、小苍兰、玫瑰、兰花、李子、紫罗兰",
+          "base": "麝香、香草、黑莓、雪松"
+        },
+        "longevityConsensus": "75%（8999 票）；肌肤 3–4 小时稳妥，衣物留香可达 2 天",
+        "sillageConsensus": "站内无独立扩散度进度条；扩散中偏强且明艳饱满，袖口一喷香气欢快扩散",
+        "topUserQuotes": {
+          "positive": [
+            "广陵戴氏烟草君（181赞）/ 蓝（146赞）/ 你的酒窝没有酒（127赞）：打车被司机夸好香；街香因经典才成街香；后调像洗过的衣服般温柔干净。",
+            "南瓜不说话ael（1146赞）/ 椒椒呀（244赞）/ JesseWing：滴手腕试香、喷一下在袖口，也可侍寝；极配整齐职场套装与细跟高跟鞋，可盐可柔适配学术会议与旅行。",
+            "独角座（66赞）：浴后温热或寒冬夜晚氛围感强。"
+          ],
+          "negativeOrCaveat": [
+            "你谜（516赞）/ 今天中午吃了什么（92赞）：有人嫌茉莉吲哚甜腻、略显俗气大众或化工刺鼻。"
+          ],
+          "rawQuotes": [
+            "广陵戴氏烟草君（181赞）/ 蓝（146赞）/ 你的酒窝没有酒（127赞）：打车被司机夸好香；街香因经典才成街香；后调像洗过的衣服般温柔干净。",
+            "南瓜不说话ael（1146赞）/ 椒椒呀（244赞）/ JesseWing：滴手腕试香、喷一下在袖口，也可侍寝；极配整齐职场套装与细跟高跟鞋，可盐可柔适配学术会议与旅行。",
+            "独角座（66赞）/ 你谜（516赞）/ 今天中午吃了什么（92赞）：浴后温热或寒冬夜晚氛围感强；有人嫌茉莉吲哚甜腻、略显俗气大众或化工刺鼻。"
+          ]
+        }
+      },
+      "socialSources": [
+        {
+          "site": "xiaohongshu.com",
+          "title": "《dior到底哪只香水好闻？》（614赞）",
+          "url": "https://www.xiaohongshu.com/explore/696b229f000000002203ade8?xsec_token=ABxsTIPcacJUfN81KUEKYnJ7Cmz0OejIb2vtJHElLOpZg=&xsec_source=pc_search",
+          "hostVerified": true
+        },
+        {
+          "site": "xiaohongshu.com",
+          "title": "《行政工位五支常伴香氛｜温柔低调通勤香》（316赞）",
+          "url": "https://www.xiaohongshu.com/explore/6a547ff5000000000f014cc7?xsec_token=ABVNPFm7UN13aUYVfKSfvgXK579qaAhJkfFrwbb5e4G_8=&xsec_source=pc_search",
+          "hostVerified": true
+        },
+        {
+          "site": "xiaohongshu.com",
+          "title": "《长期主义|女生一定要拥有的4支大牌香水！》（146赞）",
+          "url": "https://www.xiaohongshu.com/explore/6ae1bf3e0000000026038b83?xsec_token=AB3xdYsxpwdjQlCkRB6FH2IljOxuEMib3WMjXhz2wD9qM=&xsec_source=pc_search",
+          "hostVerified": true
+        },
+        {
+          "site": "post.smzdm.com",
+          "title": "什么值得买检索摘要引用：迪奥真我相关评测（a70x3lwo）",
+          "url": "https://post.smzdm.com/p/a70x3lwo/",
+          "hostVerified": false
+        },
+        {
+          "site": "post.smzdm.com",
+          "title": "什么值得买检索摘要引用：迪奥真我相关评测（a6z2pvl0）",
+          "url": "https://post.smzdm.com/p/a6z2pvl0/",
+          "hostVerified": false
+        },
+        {
+          "site": "post.smzdm.com",
+          "title": "什么值得买检索摘要引用：迪奥真我相关评测（a5x60zpx）",
+          "url": "https://post.smzdm.com/p/a5x60zpx/",
+          "hostVerified": false
+        }
+      ],
+      "sourceStats": {
+        "totalSocialSources": 6,
+        "xiaohongshuCount": 3,
+        "smzdmCount": 3,
+        "hostVerifiedTrueCount": 3,
+        "hostVerifiedFalseCount": 3
+      },
+      "candidateReputationTags": [
+        "发圈点涂通勤",
+        "套装高跟鞋绝配",
+        "经典妈妈香争议",
+        "鎏金优雅繁花",
+        "衣物留香可达两天",
+        "洁净温柔皂感尾",
+        "晕白花吲哚慎试",
+        "认清真我四版本"
+      ],
+      "rawTagPools": {
+        "nosetime": [
+          "经典街香",
+          "明艳白花果香",
+          "职场套装高跟鞋",
+          "衣物留香两天",
+          "洁净后调",
+          "妈妈香争议",
+          "吲哚晕香提醒",
+          "安全牌女人香"
+        ],
+        "social": [
+          "阳光白花女神",
+          "发圈点涂通勤",
+          "鎏金高定气场",
+          "套装礼服绝配",
+          "留香持久在线",
+          "经典妈妈香争议",
+          "密闭工位减量",
+          "认清真我四版本"
+        ]
+      },
+      "fullCommunityGuides": {
+        "sprayMethods": {
+          "nosetimeInsights": [
+            "日常仅需在袖口轻喷 1 下，即可随抬手动作欢快扩散明艳花果香，且衣物留香可达 2 天。",
+            "试香可先滴涂于手腕观察前调瓜果向干净后调的变化；皮肤上留香约 3–4 小时稳妥。",
+            "亦可用于浴后温热肌肤或作为睡前侍寝使用，贴合体温散出温暖花香。"
+          ],
+          "socialMethods": [
+            "行政工位发圈点涂法：小红书行政实测工位高频用香可仅轻点 1 下在发圈或单侧耳后，将存在感锁在个人社交安全半径内，提气场又不熏邻座。",
+            "约会提前半小时香雾法：赴约或晚宴前约 30 分钟，向半空喷 1–2 泵走入香雾或轻点手腕锁骨，待中调丰盈白花从容舒展后再见人。",
+            "自然晾干严禁揉搓手腕：轻点手腕后切忌互相搓揉，避免破坏前调梨与柑橘果香分子、凸显酒精感并缩短留香层次。",
+            "礼服膝后与裙摆点缀法：穿连衣裙或正装出席正式场合时，可在膝后或外裙摆内侧轻喷 1 泵，随步履自下而上散发优雅花香，避免胸前连喷过多。"
+          ]
+        },
+        "outfitPairings": {
+          "nosetimeInsights": [
+            "高赞香评强烈推荐搭配整齐利落的职场套装与细跟高跟鞋，明艳大方且有气场。",
+            "风格可盐可柔，既适合学术会议等正式体面场合，也适配外出旅行或日常乘车社交。",
+            "寒冬夜晚与浴后温暖环境氛围感尤为出色，属于接受度高的经典女人味安全牌。"
+          ],
+          "socialPairings": [
+            "职场精英质感西装套：剪裁利落的象牙白、浅杏或浅卡其西装套装配真丝衬衫与直筒西裤，展现专业自信且不显犀利的行政气场，适配正式会务与商务接待。",
+            "见长辈温柔风衣针织：浅杏、米白羊绒针织衫或质感风衣搭配过膝半裙，明艳大方且端庄稳重，适配春秋冬见长辈、家庭聚会与重要约会。",
+            "鎏金晚宴缎面礼服风：香槟金、象牙白真丝缎面连衣裙或高定礼服配精致高跟鞋，尽显鎏金高定繁花女神风范，适配晚宴、典礼与浪漫约会。",
+            "飘逸白裙早秋轻熟装：垂感飘逸白色连衣裙外搭薄披肩，适配微凉春秋白天出行，注意避开卫衣运动裤等过于随意的穿搭以防气场割裂。"
+          ]
+        },
+        "practicalTips": {
+          "nosetimeTips": [
+            "气味投票中茉莉（23%）与晚香玉（15%）占比突出，对白花吲哚甜腻敏感或易晕白花者建议先皮试确认。",
+            "因经典普及度高常被视作“街香”甚至带“妈妈香”偏见，若介意撞香或成熟感需提前权衡。",
+            "前调梨与香瓜果香结合白花时少数人会觉化工刺鼻，建议等待至“洗过衣服般温柔干净”的后调再做判断。"
+          ],
+          "socialTips": [
+            "密闭办公室与高温慎多喷：EDP 浓度高且留香达 7–10 小时，切忌胸前连喷或在小型密闭工位、健身房、高温户外流汗时过量使用，易发闷熏人。",
+            "认清真我系列四大版本差异：选购时须明确区分经典真我 EDP（繁花饱满长留香）、EDT（更多柑橘橙花偏年轻轻快）、纯真无酒精水基底版及浓情香精版。",
+            "晕晚香玉白花者先试半小时：部分人群初闻会觉得脂粉与白花存在感过强甚至带“妈妈香”成熟感，务必上皮试香至少 30 分钟观察中后调再入手正装。",
+            "高浓度香精勿直喷浅色真丝：直接近距离喷在浅色真丝或羊绒面料上可能留下轻微油印，喷衣物建议保持距离并优先落于耐洗衬里。"
+          ]
+        }
+      },
+      "uiCardCopy": {
+        "reputationTags": [
+          "发圈点涂通勤",
+          "套装高跟鞋绝配",
+          "经典妈妈香争议"
+        ],
+        "poetic": "瓜果托起鎏金繁花束，尾调化作洗净衣物的温柔体香",
+        "notes": {
+          "top": "梨 · 香瓜 · 木兰 · 桃子",
+          "heart": "茉莉 · 铃兰 · 晚香玉 · 玫瑰",
+          "base": "麝香 · 香草 · 黑莓 · 雪松"
+        },
+        "wearingGuide": {
+          "spray": "工位点涂发圈1下，约会提前半小时穿香雾",
+          "outfit": "象牙白西装套或卡其风衣配羊绒衫职场穿",
+          "tip": "晕茉莉晚香玉先试半小时，勿直喷浅色真丝"
+        }
+      }
+    },
+    {
+      "id": "bvlgari-pour-homme",
+      "index": 10,
+      "brandZh": "宝格丽",
+      "brandEn": "Bvlgari",
+      "nameZh": "大吉岭原版",
+      "nameEn": "Pour Homme",
+      "concentration": "EDT",
+      "uiScentFamily": "木质茶香麝香调",
+      "palette": {
+        "primary": "#4E6C64",
+        "soft": "#EAF0EE"
+      },
+      "nosetime": {
+        "title": "宝格丽 大吉岭茶淡香水 Bvlgari Pour Homme Eau de Toilette|香水评论|香调|价格|味道|香评|评价|-香水时代NoseTime.com",
+        "url": "https://www.nosetime.com/xiangshui/102121.html",
+        "hostVerified": true,
+        "ratingScore": 8.7,
+        "ratingCount": 75891,
+        "scentFamily": "花香木质调",
+        "officialNotes": {
+          "top": "茶叶、睡莲",
+          "heart": "愈创木、小豆蔻",
+          "base": "麝香、琥珀"
+        },
+        "longevityConsensus": "54%（27107 票）；明显偏短，社区高频吐槽“三分钟五步散”",
+        "sillageConsensus": "站内无独立扩散度进度条；扩散度极弱且贴肤，如他肩膀的气息，凑近方能闻清",
+        "topUserQuotes": {
+          "positive": [
+            "陈香莲（591赞）/ chocolatewenwen（164赞）/ 机智右（310赞）：像刚洗过的白衬衫、白T配牛仔裤帆布鞋，甚至喷在牛仔裤或枕边被窝侍寝；睡前喷手背早起仍有余韵；除盛夏外秋冬更佳。",
+            "鲜美鱼子酱（799赞）：前两下酒精茶味有点怪，一小时半后变成暖洋洋的邻家哥哥。"
+          ],
+          "negativeOrCaveat": [
+            "臭水时代（662赞）/ sukiiiii（401赞）/ 7潤丝儿（905赞）/ More than（344赞）：1分钟茶3分钟散5分钟无；吐槽留香奇渣、前调像晕车味或合成水生闷甜，甚至有人觉得根本闻不出茶味。"
+          ],
+          "rawQuotes": [
+            "陈香莲（591赞）/ chocolatewenwen（164赞）/ 机智右（310赞）：像刚洗过的白衬衫、白T配牛仔裤帆布鞋，甚至喷在牛仔裤或枕边被窝侍寝；睡前喷手背早起仍有余韵；除盛夏外秋冬更佳。",
+            "鲜美鱼子酱（799赞）：前两下酒精茶味有点怪，一小时半后变成暖洋洋的邻家哥哥。",
+            "臭水时代（662赞）/ sukiiiii（401赞）/ 7潤丝儿（905赞）/ More than（344赞）：1分钟茶3分钟散5分钟无；吐槽留香奇渣、前调像晕车味或合成水生闷甜，甚至有人觉得根本闻不出茶味。"
+          ]
+        }
+      },
+      "socialSources": [
+        {
+          "site": "xiaohongshu.com",
+          "title": "《终于知道大吉岭茶在现实中是什么味道了》（676赞）",
+          "url": "https://www.xiaohongshu.com/explore/69312783000000001e030df3?xsec_token=ABierQuGkaqxrs1R-juRzx9IQQw-8n6DXsuuEIusM5em8=&xsec_source=pc_search",
+          "hostVerified": true
+        },
+        {
+          "site": "xiaohongshu.com",
+          "title": "《大吉岭茶》（359赞）",
+          "url": "https://www.xiaohongshu.com/explore/69965b3c000000001b01f9d0?xsec_token=ABfdn8rWTwDh9IuFxK9ge0arvDEQlH6S1QjyckP0Do_Uw=&xsec_source=pc_search",
+          "hostVerified": true
+        },
+        {
+          "site": "xiaohongshu.com",
+          "title": "《避雷宝格丽大吉岭茶！》（146赞）",
+          "url": "https://www.xiaohongshu.com/explore/6a804f000000000024026dda?xsec_token=ABM5eYvMJEwTPHSUNdHaicSzLun3jfGJ9qzP3QMToOMmY=&xsec_source=pc_search",
+          "hostVerified": true
+        },
+        {
+          "site": "xiaohongshu.com",
+          "title": "《男生入门第一瓶香水｜大吉岭茶》（54赞）",
+          "url": "https://www.xiaohongshu.com/explore/6a9ee153000000002901370f?xsec_token=ABlWGFm5GqFLe60utIl55cV5Mv2HOx1Km-OB2TzNWwThw=&xsec_source=pc_search",
+          "hostVerified": true
+        },
+        {
+          "site": "post.smzdm.com",
+          "title": "什么值得买实测长评：宝格丽大吉岭茶相关评测（am9w5d7k）",
+          "url": "https://post.smzdm.com/p/am9w5d7k/",
+          "hostVerified": true
+        },
+        {
+          "site": "post.smzdm.com",
+          "title": "什么值得买实测长评：宝格丽大吉岭茶相关评测（ax6ml9vw）",
+          "url": "https://post.smzdm.com/p/ax6ml9vw/",
+          "hostVerified": true
+        },
+        {
+          "site": "post.smzdm.com",
+          "title": "什么值得买实测长评：宝格丽大吉岭茶相关评测（a07n0rmr）",
+          "url": "https://post.smzdm.com/p/a07n0rmr/",
+          "hostVerified": true
+        }
+      ],
+      "sourceStats": {
+        "totalSocialSources": 7,
+        "xiaohongshuCount": 4,
+        "smzdmCount": 3,
+        "hostVerifiedTrueCount": 7,
+        "hostVerifiedFalseCount": 0
+      },
+      "candidateReputationTags": [
+        "白衬衫男友香",
+        "喷衣领破五步散",
+        "前调偏醛少茶感",
+        "枕边被窝侍寝香",
+        "贴肤零攻击性",
+        "晕车水生雷点",
+        "男女共用少年气",
+        "勿混极致与夜幽"
+      ],
+      "rawTagPools": {
+        "nosetime": [
+          "白衬衫男友香",
+          "五步散短留香",
+          "贴肤伪体香",
+          "醛香前调",
+          "喷床侍寝",
+          "无茶感争议",
+          "晕车水生雷点",
+          "秋冬清爽木质"
+        ],
+        "social": [
+          "白衬衫少年感",
+          "白月光男友香",
+          "喷衣破五步散",
+          "图书馆伪体香",
+          "贴肤零攻击性",
+          "大吉岭柚微茶",
+          "前调烟草预警",
+          "勿混极致夜幽"
+        ]
+      },
+      "fullCommunityGuides": {
+        "sprayMethods": {
+          "nosetimeInsights": [
+            "因皮肤留香常被吐槽“五步散”，香友高频采用喷在牛仔裤等织物或枕边被窝作侍寝香以延长陪伴感。",
+            "睡前喷于手背，次日早起仍能闻到柔和干净的贴肤木质余韵。",
+            "刚喷出的前两下酒精与茶感气息偏怪，约一个半小时后才进入暖洋洋的贴肤状态，喷后不宜立刻近闻评判。"
+          ],
+          "socialMethods": [
+            "“喷衣不喷皮”领袖留香法：克服原版 EDT 皮肤 3–4 小时五步散的核心解法——距纯棉白衬衫领口、袖口或外套内侧约 20 厘米直喷 2–3 泵，织物可锁香至全天。",
+            "20 厘米贴肤后颈点涂法：约会或近距离相处时轻喷 1–2 泵于耳后与后颈（手腕切勿揉搓），将微扩散控制在 20 厘米贴肤圈内，拥抱靠近时才隐约可闻。",
+            "空中香雾与睡前侍寝法：向上方喷 1–2 泵走入香雾营造干净氛围，或睡前轻喷在纯棉卫衣、枕边被窝，醒来仍有温润雪松麝香余韵。",
+            "分装 3–4 小时补香与叠涂：全天外出建议随身携带便携分装瓶每 3–4 小时向衣领补喷 1 泵，或搭配极简雪松/无香身体乳延长肌肤留香。"
+          ]
+        },
+        "outfitPairings": {
+          "nosetimeInsights": [
+            "社区公认最配“刚洗过的白衬衫”，以及白T恤搭牛仔裤、帆布鞋的干净少年感日常穿搭。",
+            "扩散度极弱，如肩膀气息般需凑近方能闻清，极适合亲密距离贴肤氛围或枕边侍寝场景。",
+            "虽风格清爽，但香友实测除炎热盛夏外，在秋冬季节穿着木质麝香温润感更佳。"
+          ],
+          "socialPairings": [
+            "纯棉白衬衫学院少年风：挺括纯棉纯白或浅蓝色长袖衬衫配浅色直筒牛仔裤与帆布鞋，四季通用，最适配图书馆自习、校园上课与初次约会。",
+            "盐系极简商务轻正装：浅灰、米色或浅蓝色极简风衣/休闲西装内搭纯色圆领打底，克制干净又温柔体面，适配办公室通勤与见长辈。",
+            "基础款圆领毛衣温柔风：纯净白或浅灰纯棉/羊绒圆领毛衣搭配浅色休闲裤，凸显可靠柔和的邻家哥哥感，男女共用亦显清冷帅气。",
+            "慵懒浅灰卫衣与居家装：宽松浅灰纯棉卫衣或浅灰轻羽绒服、纯棉睡衣，适合周末宅家、秋冬季节日常出行与睡前放松。"
+          ]
+        },
+        "practicalTips": {
+          "nosetimeTips": [
+            "社区高票投出老版主导气味实为醛（37%），而茶叶仅占 15%，不少用户反馈闻不出明显茶味，勿单纯当纯茶香盲买。",
+            "认准 1996 年原版 EDT（留香满意度 54%、公认极短），切勿与留香和浓度不同的极致版 Extreme、夜幽版 Soir 或新版 EDP 混淆。",
+            "前调及水生感存在争议雷点，部分人会闻出“晕车味”或合成水生闷甜感，建议先行皮试确认不晕再入。"
+          ],
+          "socialTips": [
+            "严分原版 EDT 与三大衍生版：网传“超强茶感与持久”多指新版 EDP；极致版偏清苦葡萄柚松木，夜幽版偏闷甜琥珀麝香；认准原版 EDT 才是最柔净的白衬衫版本。",
+            "提前避雷“无茶味”与前调异味：原版 EDT 茶叶味并不浓烈（社群俗称“大吉岭柚”），且少数人对前调醛香与木质会敏感闻出微弱烟草或绿茶湿巾感，先试再入更稳。",
+            "善用喷衣解决短留香痛点：原版 EDT 在皮肤上挥发快（普遍 3–4 小时），单喷手腕极易抱怨不留香，改喷衬衫领口、袖口与大衣内衬是真实最有效解法。",
+            "避开超低价非授权渠道：大吉岭原版国民度极高导致低价仿品泛滥，选购正装建议选择品牌官方旗舰店、专柜或大型正规直营渠道。"
+          ]
+        }
+      },
+      "uiCardCopy": {
+        "reputationTags": [
+          "白衬衫男友香",
+          "喷衣领破五步散",
+          "前调偏醛少茶感"
+        ],
+        "poetic": "刚熨好的白衬衫裹着清冽木质，像靠在肩上的干净少年",
+        "notes": {
+          "top": "茶叶 · 睡莲",
+          "heart": "愈创木 · 小豆蔻",
+          "base": "麝香 · 琥珀"
+        },
+        "wearingGuide": {
+          "spray": "2至3泵直喷纯棉白衬衫领口，或喷枕边侍寝",
+          "outfit": "纯棉白衬衫牛仔裤或浅灰卫衣四季百搭穿",
+          "tip": "皮肤散香极快且少纯茶味，防混极致夜幽版"
+        }
+      }
+    }
+  ]
+}
