@@ -368,9 +368,14 @@
 
   function renderIndex() {
     var stats = computeStats();
+    var GROUP_HEADS = {
+      1: '<div class="index-group-head"><strong>第一组 · 清透热身</strong><span>古龙与轻淡香 · 闻后歇鼻换气</span></div>',
+      4: '<div class="index-group-head"><strong>第二组 · 花木进阶</strong><span>清甜花果过渡至干爽木质与繁花</span></div>',
+      7: '<div class="index-group-head"><strong>第三组 · 馥郁压轴</strong><span>醛香脂粉至高甜浓香 · 留韵收尾</span></div>'
+    };
     var html =
       '<div class="index-intro tabular">' +
-        "<span>点击任意香水跳回单签试香</span>" +
+        "<span>已按由淡入浓防疲劳排序</span>" +
         "<span>已试 " + stats.testedCount + "/10 · 均分 " + stats.avgText + "</span>" +
       "</div>";
 
@@ -378,6 +383,7 @@
       var r = getReview(item.id);
       var isWish = r.buyIntent === "must_buy";
       return (
+        (GROUP_HEADS[item.index] || "") +
         '<button type="button" class="index-row" data-jump="' + idx + '">' +
           '<span class="index-thumb-wrap">' +
             '<span class="index-swatch" style="background:' + item.palette.primary + '"></span>' +
